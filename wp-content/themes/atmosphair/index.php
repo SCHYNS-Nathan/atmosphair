@@ -49,7 +49,7 @@
     </section>
     <section class="main__projects">
         <h3 class="projects__title">Découvrez nos projets !</h3>
-        <a class="projects__link">Voir tous nos projets</a>
+        <a class="projects__link" href="<?= site_url('/atmosphair/projets/') ?>"><?= __('Voir tous nos projets','atmosphair') ?></a> <!-- Utiliser get_the_permalink() -->
         <ul class="projects__list">
             <?php
                 if(($modules = atmosphair_get_module(5))->have_posts()): while($modules->have_posts()): $modules->the_post();

@@ -24,8 +24,8 @@
     <header class="header">
         <h2 class="header__title"><?= __('Menu de navigation principale', 'atmosph\'air'); ?></h2>
         <nav class="header__nav">
-            <h3 class="header__title"><?= get_bloginfo('name') ?></h3>
             <a class="header__link" href="<?= get_home_url(); ?>">
+                <h3 class="header__title"><?= get_bloginfo('name') ?></h3>
                 <img class="header__logo" src="" alt="<?= __('Le logo d\'Atmosph\'air, une antilope avec un masque à gaz.', 'atmosph\'air') ?>">
             </a>
             <ul class="header__list">

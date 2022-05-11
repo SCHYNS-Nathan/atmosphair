@@ -25,7 +25,6 @@ function atmosphair_boot_theme()
     }
 }
 
-
 add_filter('use_block_editor_for_post', '__return_false');
 add_theme_support('post-thumbnails');
 add_filter( 'wp_check_filetype_and_ext', function($data, $file, $filename, $mimes) {
@@ -141,6 +140,7 @@ function atmosphair_get_module($count = 5, $search = null)
 }
 
 
+
 /* Récupérer les trips via une requête Wordpress
 function dw_get_trips($count = 20, $search = null)
 {
@@ -165,7 +165,6 @@ register_nav_menu('footer', 'Navigation de pied de page');
 register_nav_menu('legals', 'Lien vers les mentions légales et autres');
 
 // Fonction pour récupérer les éléments d'un menu sous forme d'un tableau d'objets
-
 function atmosphair_get_menu_items($location)
 {
     $items = [];
@@ -205,6 +204,9 @@ function atmosphair_get_menu_items($location)
     // Retourner un tableau d'éléments du menu formatés
     return $items;
 }
+
+
+
 
 // Gérer l'envoi de formulaire personnalisé
 
@@ -273,14 +275,26 @@ function dw_restrict_search_query($query) {
  
 add_filter('pre_get_posts','dw_restrict_search_query');
 
+// Fonction pour diriger vers une page template
+function atmoshphair_get_template_post(string $template) {
+    $query = new WP_Query([
+        'post-type' => 'page',
+        'post-status' => 'published',
+        'meta-query' => [
+            [
+                'key' => '_wp_page_template',
+                'value' => $template . 'php'
+            ]
+        ]
+    ]);
 
+    return $query->posts ?? null;
+}
 
 // Fonction permettant d'inclure des "partials" dans la vue et d'y injecter des variables "locales" (uniquement disponibles dans le scope de l'inclusion).
-
 function dw_include(string $partial, array $variables = [])
 {
     extract($variables);
 
     include(__DIR__ . '/partials/' . $partial . '.php');
 }
-
