@@ -3,8 +3,6 @@
     <p class="actor__text">
         <?= get_field('description', false, false); ?>
     </p>
-    <figure>
-        <?= get_field('image', false, false); ?>
-    </figure>
+    <img class="actor__image" src="<?= __DIR__ . '/images/' . get_field('image_nom', false, false) . '.jpg'; ?>" alt="">
     <a class="actor__link" href="<?= get_field('lien', false, false); ?>">Visiter le site</a>
 </div>

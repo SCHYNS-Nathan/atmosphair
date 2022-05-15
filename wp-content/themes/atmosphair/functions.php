@@ -140,7 +140,20 @@ function atmosphair_get_module($count, $search = null)
     return $modules;
 }
 
-function atmos_get_morals($count = 3, $search = null) {
+function atmos_get_actors($count = 2, $search = null)
+{
+    $actors = new DW_CustomSearchQuery([
+        'post_type' => 'actor',
+        'orderby' => 'date',
+        'order' => 'ASC',
+        'posts_per_page' => $count,
+        's' => strlen($search) ? $search : null,
+    ]);
+
+    return $actors;
+}
+function atmos_get_morals($count = 3, $search = null)
+{
     $morals = new DW_CustomSearchQuery([
         'post_type' => 'moral',
         'orderby' => 'date',
@@ -151,6 +164,8 @@ function atmos_get_morals($count = 3, $search = null) {
 
     return $morals;
 }
+
+
 
 
 

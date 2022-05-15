@@ -8,29 +8,11 @@
         </video>
         <section class="main__actors">
             <h3 class="actors__title">Les acteurs du projet</h3>
+                <?php if(($actors = atmos_get_actors(2))->have_posts()): while($actors->have_posts()): $actors->the_post();
+                    include (__DIR__ . '/partials/actor.php');
+                endwhile; else:  ?>
 
-
-            <div class="actors__actor" itemscope itemtype="https://schema.org/Organization">
-                <h4 class="actor__title" itemprop="name">La Haute École de la Province de Liège (HEPL)</h4>
-                <p class="actor__text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum leo elit, luctus vitae dolor ac, cursus luctus magna. Donec imperdiet auctor nulla, sed porta justo hendrerit nec. Maecenas finibus, libero dapibus venenatis mattis, nulla justo eleifend orci, vulputate sollicitudin felis
-                    dignissim, nec malesuada tellus porttitor. Vestibulum feugiat gravida lectus congue placerat. Maecenas lacinia ut risus sed feugiat. Cras accumsan purus sed vestibulum bibendum.
-                </p>
-                <img class="actor__image" src="" alt="Batiment de la Haute École de la Province de Liège" itemprop="image">
-                <a class="actor__link" href="#">Visiter le site de la HEPL</a>
-            </div>
-            <div class="actors__actor" itemscope itemtype="https://schema.org/Organization">
-                <h4 class="actor__title" itemprop="name">L'Institut Scientifique de Service Publique (ISSeP)</h4>
-                <p class="actor__text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum leo elit, luctus vitae dolor ac, cursus luctus magna. Donec imperdiet auctor nulla, sed porta justo hendrerit nec. Maecenas finibus, libero dapibus venenatis mattis, nulla justo eleifend orci, vulputate sollicitudin felis
-                    dignissim, nec malesuada tellus porttitor. Vestibulum feugiat gravida lectus congue placerat. Maecenas lacinia ut risus sed feugiat. Cras accumsan purus sed vestibulum bibendum.
-                </p>
-                <img class="actor__image" src="" alt="Batiment de l'Institut Scientifique de Service Publique" itemprop="image">
-                <a class="actor__link" href="#">Visiter le site de l'ISSeP</a>
-            </div>
-
-
-
+                <?php endif; ?>
         </section>
         <section class="main__morals">
             <h3 class="morals__title">Nos valeurs</h3>
@@ -39,32 +21,6 @@
             endwhile; else:  ?>
 
             <?php endif; ?>
-
-
-            <div class="morals__moral">
-                <svg class="morals__svg"></svg>
-                <h4 class="morals__title">Écologie</h4>
-                <p class="morals__text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum leo elit, luctus vitae dolor ac, cursus luctus magna. Donec imperdiet auctor nulla, sed porta justo hendrerit nec. Maecenas finibus, libero dapibus venenatis mattis, nulla justo eleifend orci, vulputate sollicitudin felis
-                </p>
-            </div>
-            <div class="morals__moral">
-                <svg class="morals__svg"></svg>
-                <h4 class="morals__title">Technologie</h4>
-                <p class="morals__text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum leo elit, luctus vitae dolor ac, cursus luctus magna. Donec imperdiet auctor nulla, sed porta justo hendrerit nec. Maecenas finibus, libero dapibus venenatis mattis, nulla justo eleifend orci, vulputate sollicitudin felis
-                </p>
-            </div>
-            <div class="morals__moral">
-                <svg class="morals__svg"></svg>
-                <h4 class="morals__title">Accueillant</h4>
-                <p class="morals__text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum leo elit, luctus vitae dolor ac, cursus luctus magna. Donec imperdiet auctor nulla, sed porta justo hendrerit nec. Maecenas finibus, libero dapibus venenatis mattis, nulla justo eleifend orci, vulputate sollicitudin felis
-                </p>
-            </div>
-
-
-
         </section>
         <section class="main__timeline">
             <h3 class="timeline__title">Petit historique du projet</h3>
