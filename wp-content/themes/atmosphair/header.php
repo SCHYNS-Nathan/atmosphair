@@ -29,7 +29,7 @@
                 <img class="header__logo" src="<?= get_template_directory_uri(); ?>/images/antilope.svg" alt="<?= __('Le logo d\'Atmosph\'air, une antilope avec un masque à gaz.', 'atmosph\'air') ?>">
             </a>
             <ul class="header__list">
-                <?php foreach(atmosphair_get_menu_items('primary') as $link): ?>
+                <?php foreach(atmos_get_menu_items('primary') as $link): ?>
                     <li class="header__item">
                         <a class="header__link" href="<?= $link->url; ?> <?= $link->title ? ' title="'.$link->title.'"' : ''; ?>">
                             <?= __($link->label, 'atmosph\'air'); ?>

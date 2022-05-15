@@ -14,9 +14,9 @@ require_once(__DIR__ . '/Forms/Validators/RequiredValidator.php');
 require_once(__DIR__ . '/Forms/Validators/EmailValidator.php');
 require_once(__DIR__ . '/Forms/Validators/AcceptedValidator.php');
 
-add_action('init', 'atmosphair_boot_theme', 1);
+add_action('init', 'atmos_boot_theme', 1);
 
-function atmosphair_boot_theme()
+function atmos_boot_theme()
 {
     load_theme_textdomain('atmosphair', __DIR__ . '/locales');
 
@@ -127,18 +127,7 @@ register_post_type('date', [
 
 
 // Récupérer les customs posts types via requête wordpress
-function atmosphair_get_module($count, $search = null)
-{
-    $modules = new DW_CustomSearchQuery([
-        'post_type' => 'module',
-        'orderby' => 'date',
-        'order' => 'DESC',
-        'posts_per_page' => $count,
-        's' => strlen($search) ? $search : null,
-    ]);
-    var_dump($modules);
-    return $modules;
-}
+
 
 function atmos_get_actors($count = 2, $search = null)
 {
@@ -164,27 +153,21 @@ function atmos_get_morals($count = 3, $search = null)
 
     return $morals;
 }
-
-
-
-
-
-/* Récupérer les trips via une requête Wordpress
-function dw_get_trips($count = 20, $search = null)
+function atmos_get_dates($count = 10, $search = null)
 {
-    // 1. on instancie l'objet WP_Query
-    $trips = new DW_CustomSearchQuery([
-        'post_type' => 'trip',
+    $dates = new DW_CustomSearchQuery([
+        'post_type' => 'date',
         'orderby' => 'date',
         'order' => 'DESC',
         'posts_per_page' => $count,
         's' => strlen($search) ? $search : null,
     ]);
 
-    // 2. on retourne l'objet WP_Query
-    return $trips;
+    return $dates;
 }
-*/
+
+
+
 
 // Enregistrer les zones de menus
 
@@ -193,7 +176,7 @@ register_nav_menu('footer', 'Navigation de pied de page');
 register_nav_menu('legals', 'Lien vers les mentions légales et autres');
 
 // Fonction pour récupérer les éléments d'un menu sous forme d'un tableau d'objets
-function atmosphair_get_menu_items($location)
+function atmos_get_menu_items($location)
 {
     $items = [];
 
@@ -232,9 +215,6 @@ function atmosphair_get_menu_items($location)
     // Retourner un tableau d'éléments du menu formatés
     return $items;
 }
-
-
-
 
 // Gérer l'envoi de formulaire personnalisé
 
@@ -304,7 +284,7 @@ function dw_restrict_search_query($query) {
 add_filter('pre_get_posts','dw_restrict_search_query');
 
 // Fonction pour diriger vers une page template
-function atmoshphair_get_template_post(string $template) {
+function atmos_get_template_post(string $template) {
     $query = new WP_Query([
         'post-type' => 'page',
         'post-status' => 'published',

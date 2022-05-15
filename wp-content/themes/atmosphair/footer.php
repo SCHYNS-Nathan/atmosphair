@@ -1,7 +1,7 @@
     <footer class="footer">
         <h2 class="footer__title"><?= __('Pied de page', 'atmosph\'air'); ?></h2>
         <ul class="footer__list">
-            <?php foreach(atmosphair_get_menu_items('footer') as $link): ?>
+            <?php foreach(atmos_get_menu_items('footer') as $link): ?>
                 <li class="footer__item">
                     <a class="footer__link" href="<?= $link->url; ?> <?= $link->title ? ' title="'.$link->title.'"' : ''; ?>">
                         <?= __($link->label, 'atmosph\'air'); ?>

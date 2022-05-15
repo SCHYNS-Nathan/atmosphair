@@ -24,75 +24,11 @@
         </section>
         <section class="main__timeline">
             <h3 class="timeline__title">Petit historique du projet</h3>
+            <?php if(($dates = atmos_get_dates(10))->have_posts()): while($dates->have_posts()): $dates->the_post();
+                include (__DIR__ . '/partials/date.php');
+            endwhile; else:  ?>
 
-
-
-            <div class="timeline__entry" itemscope itemtype="https://schema.org/Event">
-                <h4 class="timeline__date" itemprop="startData"><time>2015</time></h4>
-                <p class="timeline__text" itemprop="description">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum leo elit, luctus vitae dolor ac, cursus luctus magna. Donec imperdiet auctor nulla, sed porta justo hendrerit nec. Maecenas finibus, libero dapibus venenatis mattis, nulla justo eleifend orci, vulputate sollicitudin felis
-                </p>
-                <img class="timeline__image" src="" alt="Photo du projet">
-            </div>
-            <div class="timeline__entry" itemscope itemtype="https://schema.org/Event">
-                <h4 class="timeline__date" itemprop="startData"><time>Janvier 2016</time></h4>
-                <p class="timeline__text" itemprop="description">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum leo elit, luctus vitae dolor ac, cursus luctus magna.
-                </p>
-                <img class="timeline__image" src="" alt="Photo du projet">
-            </div>
-            <div class="timeline__entry" itemscope itemtype="https://schema.org/Event">
-                <h4 class="timeline__date" itemprop="startData"><time>Juin 2016</time></h4>
-                <p class="timeline__text" itemprop="description">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum leo elit, luctus vitae dolor ac, cursus luctus magna. Donec imperdiet auctor nulla, sed porta justo hendrerit nec. Maecenas finibus, libero dapibus venenatis mattis, nulla justo eleifend orci, vulputate sollicitudin felisas finibus, libero dapibus venenatis mattis, nulla justo eleifend orci, vulputate sollicitudin felisas finibus, libero dapibus venenatis mattis, nulla justo eleifend orci, vulputate sollicitudin felis
-                </p>
-                <img class="timeline__image" src="" alt="Photo du projet">
-            </div>
-            <div class="timeline__entry" itemscope itemtype="https://schema.org/Event">
-                <h4 class="timeline__date" itemprop="startData"><time>Août 2016</time></h4>
-                <p class="timeline__text" itemprop="description">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum leo elit, luctus vitae dolor ac, cursus luctus magna. Donec imperdiet auctor nulla, sed porta justo hendrerit nec. Maecenas finibus, libero dapibus venenatis mattis, nulla justo eleifend orci, vulputate sollicitudin felis
-                </p>
-                <img class="timeline__image" src="" alt="Photo du projet">
-            </div>
-            <div class="timeline__entry" itemscope itemtype="https://schema.org/Event">
-                <h4 class="timeline__date" itemprop="startData"><time>Novembre 2017</time></h4>
-                <p class="timeline__text" itemprop="description">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum leo elit, luctus vitae dolor ac, cursus luctus magna. Donec imperdiet auctor nulla, sed porta justo hendrerit nec. Maecenas finibus, libero dapibus venenatis mattis, nulla justo eleifend orci, vulputate sollicitudin felis
-                </p>
-                <img class="timeline__image" src="" alt="Photo du projet">
-            </div>
-            <div class="timeline__entry" itemscope itemtype="https://schema.org/Event">
-                <h4 class="timeline__date" itemprop="startData"><time>2018</time></h4>
-                <p class="timeline__text" itemprop="description">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum leo elit, luctus vitae dolor ac, cursus luctus magna. Donec imperdiet auctor nulla, sed porta justo hendrerit nec. Maecenas finibus, libero dapibus venenatis mattis, nulla justo eleifend orci, vulputate sollicitudin felis
-                </p>
-                <img class="timeline__image" src="" alt="Photo du projet">
-            </div>
-            <div class="timeline__entry" itemscope itemtype="https://schema.org/Event">
-                <h4 class="timeline__date" itemprop="startData"><time>Février 2020</time></h4>
-                <p class="timeline__text" itemprop="description">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum leo elit, luctus vitae dolor ac, cursus luctus magna. Donec imperdiet auctor nulla, sed porta justo hendrerit nec. Maecenas finibus, libero dapibus venenatis mattis, nulla justo eleifend orci, vulputate sollicitudin felis
-                </p>
-                <img class="timeline__image" src="" alt="Photo du projet">
-            </div>
-            <div class="timeline__entry" itemscope itemtype="https://schema.org/Event">
-                <h4 class="timeline__date" itemprop="startData"><time>Mars 2022</time></h4>
-                <p class="timeline__text" itemprop="description">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum leo elit, luctus vitae dolor ac, cursus luctus magna. Donec imperdiet auctor nulla, sed porta justo hendrerit nec. Maecenas finibus, libero dapibus venenatis mattis, nulla justo eleifend orci, vulputate sollicitudin felis
-                </p>
-                <img class="timeline__image" src="" alt="Photo du projet">
-            </div>
-            <div class="timeline__entry" itemscope itemtype="https://schema.org/Event">
-                <h4 class="timeline__date" itemprop="startData"><time>Mai 2022</time></h4>
-                <p class="timeline__text" itemprop="description">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum leo elit, luctus vitae dolor ac, cursus luctus magna. Donec imperdiet auctor nulla, sed porta justo hendrerit nec. Maecenas finibus, libero dapibus venenatis mattis, nulla justo eleifend orci, vulputate sollicitudin felis
-                </p>
-                <img class="timeline__image" src="" alt="Photo du projet">
-            </div>
-
-
-
+            <?php endif; ?>
         </section>
     </main>
 <?php get_footer(); ?>

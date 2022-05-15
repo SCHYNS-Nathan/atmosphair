@@ -1,9 +1,7 @@
 <div class="timeline__entry" itemscope itemtype="https://schema.org/Event">
-    <h4 class="timeline__date" itemprop="startData"><time><?=  ?></time></h4>
+    <h4 class="timeline__date" itemprop="startData"><time><?= get_field('date', false, false); ?></time></h4>
     <p class="timeline__text" itemprop="description">
-        <?=  ?>
+        <?= get_field('explication', false, false); ?>
     </p>
-    <figure>
-        <?=  ?>
-    </figure>
+    <img class="timeline__image" src="<?= get_template_directory_uri() . "/images/" . get_field('date', false, false) . ".jpg"; ?>">
 </div>
