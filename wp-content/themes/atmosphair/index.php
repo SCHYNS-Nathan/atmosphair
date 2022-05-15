@@ -51,15 +51,20 @@
         <h3 class="projects__title">Découvrez nos projets !</h3>
         <a class="projects__link" href="<?= site_url('/atmosphair/projets/') ?>"><?= __('Voir tous nos projets','atmosphair') ?></a> <!-- Utiliser get_the_permalink() -->
         <ul class="projects__list">
+
+
             <?php
-                if(($modules = atmosphair_get_module(5))->have_posts()): while($modules->have_posts()): $modules->the_post();
-                    dw_include('module');
-            endwhile; else: ?>
+                if(($modules = atmosphair_get_module(1))->have_posts()): while($modules->have_posts()): $modules->the_post();
+
+
+                // dw_include('module');
+
+
+                endwhile; else: ?>
                 <p class="projects__empty"><?= __('Il n\'y a pas de modules à afficher.', 'atmosph\'air') ?></p>
             <?php endif; ?>
 
-
-
+            <!--
             <li class="projects__item" itemscope itemtype="https://schema.org/Project">
                 <article class="projects__projet">
                     <img class="projet__image" src="" alt="Le boîtier du projet Antilope" itemprop="image">
@@ -73,9 +78,6 @@
                     <a class="projet__link" href="template-single-project.php">Voir le projet en détail</a>
                 </article>
             </li>
-
-
-
             <li class="projects__item" itemscope itemtype="https://schema.org/Project">
                 <article class="projects__projet">
                     <img class="projet__image" src="" alt="Le boîtier du projet Saïga" itemprop="image">
@@ -128,7 +130,7 @@
                     <a class="projet__link" href="template-single-project.php">Voir le projet en détail</a>
                 </article>
             </li>
-
+            -->
 
 
             <li class="projects__item">
@@ -242,6 +244,7 @@
         </div>
     </section>
 
+    <!--
     <section class="layout__trips trips">
         <h2 class="trips__title"><?= __('Mes derniers voyages', 'atmosphair'); ?></h2>
         <div class="trips__container">
@@ -253,7 +256,7 @@
             <?php endif; ?>
         </div>
     </section>
-
+    -->
 
 
 

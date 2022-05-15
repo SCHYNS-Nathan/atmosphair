@@ -29,7 +29,7 @@
 
             <div class="logos__image">
                 <a class="logos__link" href=""></a>
-                <img src="" alt="">
+                <img src="<?= get_template_directory_uri(); ?>/images/" alt="">
             </div>
 
         </section>

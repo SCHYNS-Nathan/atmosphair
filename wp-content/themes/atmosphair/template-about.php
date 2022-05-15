@@ -10,7 +10,6 @@
             <h3 class="actors__title">Les acteurs du projet</h3>
 
 
-
             <div class="actors__actor" itemscope itemtype="https://schema.org/Organization">
                 <h4 class="actor__title" itemprop="name">La Haute École de la Province de Liège (HEPL)</h4>
                 <p class="actor__text">
@@ -35,7 +34,11 @@
         </section>
         <section class="main__morals">
             <h3 class="morals__title">Nos valeurs</h3>
+            <?php if(($morals = atmos_get_morals(3))->have_posts()): while($morals->have_posts()): $morals->the_post();
+                include (__DIR__ . '/partials/moral.php');
+            endwhile; else:  ?>
 
+            <?php endif; ?>
 
 
             <div class="morals__moral">

@@ -127,7 +127,7 @@ register_post_type('date', [
 
 
 // Récupérer les customs posts types via requête wordpress
-function atmosphair_get_module($count = 5, $search = null)
+function atmosphair_get_module($count, $search = null)
 {
     $modules = new DW_CustomSearchQuery([
         'post_type' => 'module',
@@ -136,7 +136,20 @@ function atmosphair_get_module($count = 5, $search = null)
         'posts_per_page' => $count,
         's' => strlen($search) ? $search : null,
     ]);
+    var_dump($modules);
     return $modules;
+}
+
+function atmos_get_morals($count = 3, $search = null) {
+    $morals = new DW_CustomSearchQuery([
+        'post_type' => 'moral',
+        'orderby' => 'date',
+        'order' => 'DESC',
+        'posts_per_page' => $count,
+        's' => strlen($search) ? $search : null,
+    ]);
+
+    return $morals;
 }
 
 
@@ -295,6 +308,5 @@ function atmoshphair_get_template_post(string $template) {
 function dw_include(string $partial, array $variables = [])
 {
     extract($variables);
-
     include(__DIR__ . '/partials/' . $partial . '.php');
 }

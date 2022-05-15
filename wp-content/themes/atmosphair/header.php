@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta name="author" content="">
-    <meta name="description" content="">
+    <meta name="author" content="Nathan Schyns">
+    <meta name="description" content="Atmosph'air est un site présentant les projets de la section Électronique et Systèmes Embarqués de la Haute École de la Province de Liège.">
 
-    <meta property="og:title" content="">
-    <meta property="og:image" content="">
-    <meta property="og:description" content="">
+    <meta property="og:title" content="Atmosph'air">
+    <meta property="og:image" content="<?= get_template_directory_uri(); ?>/images/">
+    <meta property="og:description" content="Atmosph'air est un site présentant les projets de la section Électronique et Systèmes Embarqués de la Haute École de la Province de Liège.">
 
     <meta charset="UTF-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="MobileOptimized" content="width">
 
-    <link rel="icon" type="image/x-icon" href="favicon/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="<?= get_template_directory_uri(); ?>/images/favicon/favicon.ico">
     <title><?= wp_title('|', false, 'right') . get_bloginfo('name') ?></title>
 
     <link rel="stylesheet" type="text/css" href="<?= dw_mix('css/style.css') ?>">
@@ -26,7 +26,7 @@
         <nav class="header__nav">
             <a class="header__link" href="<?= get_home_url(); ?>">
                 <h3 class="header__title"><?= get_bloginfo('name') ?></h3>
-                <img class="header__logo" src="" alt="<?= __('Le logo d\'Atmosph\'air, une antilope avec un masque à gaz.', 'atmosph\'air') ?>">
+                <img class="header__logo" src="<?= get_template_directory_uri(); ?>/images/antilope.svg" alt="<?= __('Le logo d\'Atmosph\'air, une antilope avec un masque à gaz.', 'atmosph\'air') ?>">
             </a>
             <ul class="header__list">
                 <?php foreach(atmosphair_get_menu_items('primary') as $link): ?>
