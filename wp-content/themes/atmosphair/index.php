@@ -95,7 +95,7 @@
 
             <label class="contact__label" for="subject">Sujet</label>
             <select class="contact__select" id="subject" name="subject">
-                <option value="issep">Question à propos des résultats</option>
+                <option value="issep"><?= __('Question à propos des résultats','atmosphair') ?></option>
                 <option value="hepl">Question à propos de la section électronique et systèmes embarqués</option>
                 <option value="issep">Achat pour le secteur privé</option>
                 <option value="issep">Achat pour le secteur public</option>

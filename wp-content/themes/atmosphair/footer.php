@@ -25,13 +25,22 @@
             </div>
         </section>
         <section class="footer__logos">
-            <h3 class=logos__title""><?= __('Logos des acteurs du projet', 'atmosph\'air') ?></h3>
-
+            <h3 class=logos__title""><?= __('Logos des acteurs du projet', 'atmosph\'air'); ?></h3>
             <div class="logos__image">
-                <a class="logos__link" href=""></a>
-                <img src="<?= get_template_directory_uri(); ?>/images/" alt="">
+                <a class="logos__link" href="https://www.hepl.be/fr">
+                    <img class="logos__svg" src="<?= get_template_directory_uri(); ?>/images/hepl.svg" alt="<?= __('Logo HEPL', 'atmosph\'air'); ?>">
+                </a>
             </div>
-
+            <div class="logos__image">
+                <a class="logos__link" href="https://www.issep.be/">
+                    <img class="logos__svg" src="<?= get_template_directory_uri(); ?>/images/issep.svg" alt="<?= __('Logo ISSeP', 'atmosph\'air'); ?>">
+                </a>
+            </div>
+            <div class="logos__image">
+                <a class="logos__link" href="https://www.hepl.be/fr/master-ingenieur-industriel/electronique-systemes-embarques">
+                    <img class="logos__svg" src="<?= get_template_directory_uri(); ?>/images/section_electronique.svg" alt="<?= __('Logo Section électronique', 'atmosph\'air'); ?>">
+                </a>
+            </div>
         </section>
     </footer>
 </body>
