@@ -1,12 +1,11 @@
 <?php /* Template Name: Template page Projet */ ?>
 
 <?= get_header(); ?>
-
     <main class="main" itemscope itemtype="https://schema.org/Project">
-      <a class="main__return" href="template-projects.php">Retour à la page projets</a>
+      <a class="main__return" href="<?= site_url('projets/'); ?>">Retour à la page projets</a>
       <img class="main__image" src="" alt="Boîtier Antilope" itemprop="image">
       <div class="main__title">
-        <h2 class="title__title" itemprop="name">Antilope</h2>
+        <h2 class="title__title" itemprop="name"><?= get_the_title(); ?></h2>
         <svg class="title__svg">
 
         </svg>

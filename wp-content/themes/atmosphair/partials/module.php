@@ -9,7 +9,7 @@
             <p class="project__description" itemprop="description">
                 <?= get_field('description', false, false); ?>
             </p>
-            <a class="project__link" href="">Voir le projet en détail</a>
+            <a class="project__link" href="<?= get_the_permalink(); ?>">Voir le projet en détail</a>
         </div>
     </article>
 </li>

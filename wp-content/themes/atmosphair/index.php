@@ -1,16 +1,14 @@
 <?php get_header(); ?>
-
 <main class="layout">
-    <h2 class="main__title">Pour un air plus sain au coeur de la ville !</h2>
-    <!-- <img class="main__image" src="" alt="Un parc avec des arbres aux feuilles jaunes au coeur d'une ville"> BACKGROUND IMAGE ??? -->
+    <h2 class="main__title"><?= __('Pour un air plus sain au coeur de la ville !','atmosph\'air'); ?></h2>
     <section class="main__stats">
-        <h3 class="stats__title">La polution en quelques chiffres</h3>
+        <h3 class="stats__title"><?= __('La polution en quelques chiffres','atmosph\'air'); ?></h3>
         <div class="stats__stat">
             <p class="stats__number">
                 <strong>50%</strong>
             </p>
             <p class="stats__text">
-                de taux de <em>particule fine</em> ont été détecté dans les embouteillages des grandes villes belges en 2018.
+                <?= __('de taux de ', 'atmosh\'air') . '<em>' . __('particule fine ','atmosp\'air') . '</em>' . __('ont été détecté dans les embouteillages des grandes villes belges en 2018.','atmosph\'air'); ?>
             </p>
         </div>
         <div class="stats__stat">
@@ -18,7 +16,7 @@
                 <strong>+33%</strong>
             </p>
             <p class="stats__text">
-                d’augmentation de <em>la polution de l’air</em> entre 2019 et 2020.
+                <?= __('d’augmentation de ', 'atmosh\'air') . '<em>' . __('la polution de l’air ', 'atmosh\'air') . '</em>' .  __('entre 2019 et 2020.','atmosph\'air'); ?>
             </p>
         </div>
         <div class="stats__stat">
@@ -26,155 +24,65 @@
                 <strong>x5</strong>
             </p>
             <p class="stats__text">
-                le nombre de personnes diagnostiquées avec des <em>maladies respiratoires</em> en 2021.
+                <?= __('le nombre de personnes diagnostiquées avec des ', 'atmosh\'air') . '<em>' . __('maladies respiratoires ', 'atmosh\'air') . '</em>' . __('en 2021.','atmosph\'air'); ?>
             </p>
         </div>
     </section>
     <section class="main__presentation">
-        <h3 class="presentation__title">L’air joue un rôle <em>primordial</em> pour la vie telle que nous la connaissons sur terre.</h3>
+        <h3 class="presentation__title"><?= __('L’air joue un rôle ', 'atmosh\'air') .  '<em>' . __('primordial ', 'atmosh\'air') . '</em>' . __('pour la vie telle que nous la connaissons sur terre.','atmosph\'air'); ?></h3>
         <p class="presentation__text">
-            Une mauvaise qualité de l’air a une incidence négative sur la santé humaine et sur l’environnement au sens large. Ses conséquences sont non seulement de nature sanitaire, écologique et économique mais aussi du point de vue humain :
+            <?= __('Une mauvaise qualité de l’air a une incidence négative sur la santé humaine et sur l’environnement au sens large. Ses conséquences sont non seulement de nature sanitaire, écologique et économique mais aussi du point de vue humain :','atmosph\'air'); ?>
         </p>
         <p class="presentation__conclusion">
-            Disposer d’un <em>air de qualité</em> et <em>sain</em> doit être <em>un droit fondamental !</em>
+            <?= __('Disposer d’un ', 'atmosh\'air') . '<em>' . __('air de qualité ', 'atmosh\'air') . '</em>' . __('et ', 'atmosh\'air') . '<em>' . __('sain ', 'atmosh\'air') . '</em>' . __('doit être ', 'atmosh\'air') . '<em>' . __('un droit fondamental !', 'atmosh\'air') . '</em>'?>
         </p>
     </section>
     <section class="main__actors">
-        <h3 class="actors__title">Les acteurs du projet</h3>
-        <img class="actors__image" src="" alt="Du personnel de l'ISSeP et des étudiant de la HEPL ayant travaillés sur Antilope">
+        <h3 class="actors__title"><?= __('Les acteurs du projet','atmosph\'air'); ?></h3>
+        <img class="actors__image" src="<?= get_template_directory_uri(); ?>/images/actors.jpg" alt="<?= __('Du personnel de l\'ISSeP et des étudiant de la HEPL ayant travaillés sur Antilope','atmosph\'air'); ?>">
         <p class="actors__text">
-            Afin que ce droit soit respecté, la section Électronique & Systèmes Embarqués de la Haute École de la Province de Liège (HEPL) s’est alliée à l’Institut Scientifique de Service Publique (ISSeP) pour créer une gamme de capteurs d’air.
+            <?= __('Afin que ce droit soit respecté, la section Électronique & Systèmes Embarqués de la Haute École de la Province de Liège (HEPL) s’est alliée à l’Institut Scientifique de Service Publique (ISSeP) pour créer une gamme de capteurs d’air.','atmosph\'air'); ?>
         </p>
-        <a class="actors__link" href="">Les acteurs du projet</a>
+        <a class="actors__link" href="<?= site_url('a-propos/'); ?>"><?= __('Les acteurs du projet','atmosph\'air'); ?></a>
     </section>
     <section class="main__projects">
-        <h3 class="projects__title">Découvrez nos projets !</h3>
-        <a class="projects__link" href="<?= site_url('/atmosphair/projets/') ?>"><?= __('Voir tous nos projets','atmosphair') ?></a> <!-- Utiliser get_the_permalink() -->
+        <h3 class="projects__title"><?= __('Découvrez nos projets !','atmosph\'air'); ?></h3>
+        <a class="projects__link" href="<?= site_url('projets/'); ?>"><?= __('Voir tous nos projets','atmosphair') ?></a>
         <ul class="projects__list">
-
-
-            <?php
-                if(($modules = atmosphair_get_module(1))->have_posts()): while($modules->have_posts()): $modules->the_post();
-
-
-                // dw_include('module');
-
-
-                endwhile; else: ?>
-                <p class="projects__empty"><?= __('Il n\'y a pas de modules à afficher.', 'atmosph\'air') ?></p>
+            <?php if(($modules = atmos_get_modules_for_index(5))->have_posts()): while($modules->have_posts()): $modules->the_post();
+                include (__DIR__ . '/partials/module.php');
+            endwhile; else:  ?>
+                <p class="projects__error"><?= __('Il n\'y a pas de modules à afficher pour le moment, revenez plus tard.','atmosph\'air'); ?></p>
             <?php endif; ?>
-
-            <!--
-            <li class="projects__item" itemscope itemtype="https://schema.org/Project">
-                <article class="projects__projet">
-                    <img class="projet__image" src="" alt="Le boîtier du projet Antilope" itemprop="image">
-                    <h4 class="projet__title" itemprop="name"></h4>
-                    <svg class="projet__svg">
-
-                    </svg>
-                    <p class="projet__description" itemprop="description">
-                        Le compagnon de poche qui analyse l’état de l’air durant vos promenade !
-                    </p>
-                    <a class="projet__link" href="template-single-project.php">Voir le projet en détail</a>
-                </article>
-            </li>
-            <li class="projects__item" itemscope itemtype="https://schema.org/Project">
-                <article class="projects__projet">
-                    <img class="projet__image" src="" alt="Le boîtier du projet Saïga" itemprop="image">
-                    <h4 class="projet__title" itemprop="name">Saïga</h4>
-                    <svg class="projet__svg">
-
-                    </svg>
-                    <p class="projet__description" itemprop="description">
-                        Plus précis et autonome, il est l’ami des villes !
-                    </p>
-                    <a class="projet__link" href="template-single-project.php">Voir le projet en détail</a>
-                </article>
-            </li>
-            <li class="projects__item" itemscope itemtype="https://schema.org/Project">
-                <article class="projects__projet">
-                    <img class="projet__image" src="" alt="Le boîtier du projet Impala" itemprop="image">
-                    <h4 class="projet__title" itemprop="name">Impala</h4>
-                    <svg class="projet__svg">
-
-                    </svg>
-                    <p class="projet__description" itemprop="description">
-                        Le copilote rêvé de tout automobiliste !
-                    </p>
-                    <a class="projet__link" href="template-single-project.php">Voir le projet en détail</a>
-                </article>
-            </li>
-            <li class="projects__item" itemscope itemtype="https://schema.org/Project">
-                <article class="projects__projet">
-                    <img class="projet__image" src="" alt="Le boîtier du projet Oryx" itemprop="image">
-                    <h4 class="projet__title" itemprop="name">Oryx</h4>
-                    <svg class="projet__svg">
-
-                    </svg>
-                    <p class="projet__description" itemprop="description">
-                        L’outerboard fixe qui capte son, mouvement et particules !
-                    </p>
-                    <a class="projet__link" href="template-single-project.php">Voir le projet en détail</a>
-                </article>
-            </li>
-            <li class="projects__item" itemscope itemtype="https://schema.org/Project">
-                <article class="projects__projet">
-                    <img class="projet__image" src="" alt="Le boîtier du projet Nyala" itemprop="image">
-                    <h4 class="projet__title" itemprop="name">Nyala</h4>
-                    <svg class="projet__svg">
-
-                    </svg>
-                    <p class="projet__description" itemprop="description">
-                        Le module destiné aux étudiants !
-                    </p>
-                    <a class="projet__link" href="template-single-project.php">Voir le projet en détail</a>
-                </article>
-            </li>
-            -->
-
-
             <li class="projects__item">
-                <div class="projects__projet">
-                    <svg class="projet__svg">
-
-                    </svg>
-                    <a class="projet__link" href="template-projects.php">Voir tous nos projet</a>
+                <div class="projects__project">
+                    <img class="project__icon" src="<?= get_template_directory_uri() . "/images/r_arrow.svg"; ?>" alt="->">
+                    <a class="project__link" href="<?= site_url('/projets/') ?>"><?= __('Voir tous nos projets','atmosphair') ?></a>
                 </div>
             </li>
         </ul>
     </section>
     <section class="main__articles">
-        <h3 class="articles__title">On parle de nous !</h3>
-        <a class="articles__link">Voir toutes les publications</a>
+        <h3 class="articles__title"><?= __('On parle de nous !','atmosphair') ?></h3>
+        <a class="articles__link"><?= __('Voir toutes les publications','atmosphair') ?></a>
         <div class="articles__container">
-
-
-
-                <article class="article" itemscope itemtype="https://schema.org/Article">
-                    <a class="article__link" href="">Lire la publication</a>
-                    <div class="articles__article">
-                        <figure class="article__image">
-
-                        </figure>
-                        <h4 class="article__title" itemprop="name"><?= get_the_title(); ?></h4>
-                    </div>
-                    <p class="article__text">
-                        <time class="article__time" itemprop="datePublished">10 mars 2022</time>
-                    </p>
-                </article>
-
-
-
-        </div>
-        <div class="articles__container">
-            <a class="article__link" href="template-articles.php">
-                <img class="article__image" src="" alt="Image bannière de l'article">
-                <h4 class="article__title">Voir toutes les publications nous concernant</h4>
-            </a>
+            <ul class="articles__list">
+                <?php if(($publications = atmos_get_publications_for_index(5))->have_posts()): while($publications->have_posts()): $publications->the_post();
+                    include (__DIR__ . '/partials/publication.php');
+                endwhile; else:  ?>
+                    <p class="projects__error"><?= __('Il n\'y a pas d\'article à afficher pour le moment, revenez plus tard.','atmosph\'air'); ?></p>
+                <?php endif; ?>
+                <div class="articles__container">
+                    <a class="article__link" href="<?= site_url('publications') ?>">
+                        <img class="article__image" src="<?= get_template_directory_uri(); ?>/images/more_articles.jpg" alt="Photo d'un tas de publications.">
+                        <h4 class="article__title"><?= __('Voir toutes les publications nous concernant','atmosphair') ?></h4>
+                    </a>
+                </div>
+            </ul>
         </div>
     </section>
     <section class="main__contact">
-        <h3 class="contact__title">Une question ? Contactez-nous !</h3>
+        <h3 class="contact__title"><?= __('Une question ? Contactez-nous !','atmosphair') ?></h3>
         <form class="contact__form">
             <label class="contact__label" for="name">Votre nom</label>
             <input class="contact__input" id="name" name="name">
@@ -200,69 +108,14 @@
         </form>
     </section>
     <section class="main__socials">
-        <h3 class="socials__title">Suivez-nous sur nos réseaux sociaux !</h3>
+        <h3 class="socials__title"><?= __('Suivez-nous sur nos réseaux sociaux !','atmosphair') ?></h3>
         <ul class="socials__list">
-            <li class="socials__item">
-                <a class="socials__link">
-                    <svg class="socials__svg">
-
-                    </svg>
-                </a>
-            </li>
-            <li class="socials__item">
-                <a class="socials__link">
-                    <svg class="socials__svg">
-
-                    </svg>
-                </a>
-            </li>
-            <li class="socials__item">
-                <a class="socials__link">
-                    <svg class="socials__svg">
-
-                    </svg>
-                </a>
-            </li>
+            <?php if(($socials = atmos_get_socials(2))->have_posts()): while($socials->have_posts()): $socials->the_post();
+                include (__DIR__ . '/partials/social.php');
+            endwhile; else:  ?>
+                <p class="projects__error"><?= __('Il n\'y a pas de réseau social à afficher pour le moment, revenez plus tard.','atmosph\'air'); ?></p>
+            <?php endif; ?>
         </ul>
     </section>
-
-
-
-
-
-
-
-    <section class="layout__latest latest">
-        <h2 class="latest__title"><?= __('Mes derniers articles', 'atmosphair'); ?></h2>
-        <div class="latest__container">
-            <?php 
-            if(have_posts()): while(have_posts()): the_post();
-                dw_include('post', ['modifier' => 'index']);
-            endwhile; else: ?>
-                <!-- Il n'y a pas d'articles à afficher -->
-            <?php endif; ?>
-        </div>
-    </section>
-
-    <!--
-    <section class="layout__trips trips">
-        <h2 class="trips__title"><?= __('Mes derniers voyages', 'atmosphair'); ?></h2>
-        <div class="trips__container">
-            <?php 
-            if(($trips = dw_get_trips(3))->have_posts()): while($trips->have_posts()): $trips->the_post();
-                dw_include('trip');
-            endwhile; else: ?>
-            <p class="trips__empty"><?= __('Il n’y a pas de voyages à vous raconter...', 'atmosphair'); ?></p>
-            <?php endif; ?>
-        </div>
-    </section>
-    -->
-
-
-
-
-
-
 </main>
-
 <?php get_footer(); ?>

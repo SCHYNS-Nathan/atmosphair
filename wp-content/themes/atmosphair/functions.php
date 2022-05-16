@@ -124,10 +124,47 @@ register_post_type('date', [
     'supports' => ['title','editor','thumbnail'],
     'rewrite' => ['slug' => 'dates'],
 ]);
+register_post_type('social', [
+    'label' => 'Socials',
+    'labels' => [
+        'name' => 'Socials',
+        'singular_name' => 'Social',
+    ],
+    'description' => 'Vos réseaux sociaux.',
+    'public' => true,
+    'has_archive' => true,
+    'menu_position' => 2,
+    'menu_icon' => 'dashicons-share',
+    'supports' => ['title','editor','thumbnail'],
+    'rewrite' => ['slug' => 'dates'],
+]);
 
 
 // Récupérer les customs posts types via requête wordpress
+function atmos_get_modules_for_index($count = 5, $search = null)
+{
+    $modules = new DW_CustomSearchQuery([
+        'post_type' => 'module',
+        'orderby' => 'date',
+        'order' => 'ASC',
+        'posts_per_page' => $count,
+        's' => strlen($search) ? $search : null,
+    ]);
 
+    return $modules;
+}
+function atmos_get_publications_for_index($count = 5, $search = null)
+{
+    $publications = new DW_CustomSearchQuery([
+        'post_type' => 'publication',
+        'orderby' => 'date',
+        'order' => 'ASC',
+        'posts_per_page' => $count,
+        's' => strlen($search) ? $search : null,
+    ]);
+
+    return $publications;
+}
 
 function atmos_get_actors($count = 2, $search = null)
 {
@@ -179,6 +216,31 @@ function atmos_get_modules_for_project($count = 6, $search = null)
     return $modules;
 }
 
+function atmos_get_publications($count = 10, $search = null)
+{
+    $publications = new DW_CustomSearchQuery([
+        'post_type' => 'publication',
+        'orderby' => 'date',
+        'order' => 'ASC',
+        'posts_per_page' => $count,
+        's' => strlen($search) ? $search : null,
+    ]);
+
+    return $publications;
+}
+
+function atmos_get_socials($count = 2, $search = null)
+{
+    $socials = new DW_CustomSearchQuery([
+        'post_type' => 'social',
+        'orderby' => 'date',
+        'order' => 'ASC',
+        'posts_per_page' => $count,
+        's' => strlen($search) ? $search : null,
+    ]);
+
+    return $socials;
+}
 
 
 // Enregistrer les zones de menus
