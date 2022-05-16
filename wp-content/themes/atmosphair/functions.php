@@ -158,7 +158,7 @@ function atmos_get_dates($count = 10, $search = null)
     $dates = new DW_CustomSearchQuery([
         'post_type' => 'date',
         'orderby' => 'date',
-        'order' => 'DESC',
+        'order' => 'ASC',
         'posts_per_page' => $count,
         's' => strlen($search) ? $search : null,
     ]);
@@ -166,6 +166,18 @@ function atmos_get_dates($count = 10, $search = null)
     return $dates;
 }
 
+function atmos_get_modules_for_project($count = 6, $search = null)
+{
+    $modules = new DW_CustomSearchQuery([
+        'post_type' => 'module',
+        'orderby' => 'date',
+        'order' => 'ASC',
+        'posts_per_page' => $count,
+        's' => strlen($search) ? $search : null,
+    ]);
+
+    return $modules;
+}
 
 
 
