@@ -16,11 +16,11 @@
     <link rel="icon" type="image/x-icon" href="<?= get_template_directory_uri(); ?>/images/favicon/favicon.ico">
     <title><?= wp_title('|', false, 'right') . get_bloginfo('name') ?></title>
 
-    <link rel="stylesheet" type="text/css" href="<?= dw_mix('css/style.css') ?>">
-    <script type="text/javascript" src="<?= dw_mix('js/script.js') ?>" defer></script>
+    <link rel="stylesheet" type="text/css" href="<?= atmos_mix('/css/style.css') ?>">
+    <script type="text/javascript" src="<?= atmos_mix('js/script.js') ?>" defer></script>
 </head>
 <body>
-    <h1 class="title"><?= get_bloginfo('name') ?></h1>
+    <h1 class="title"><?= get_bloginfo('name'); ?></h1>
     <header class="header">
         <h2 class="header__title"><?= __('Menu de navigation principale', 'atmosph\'air'); ?></h2>
         <nav class="header__nav">

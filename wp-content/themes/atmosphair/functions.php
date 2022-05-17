@@ -322,7 +322,7 @@ function dw_get_contact_field_error($field)
 
 // Fonction qui charge les assets compilés et retourne leure chemin absolu
 
-function dw_mix($path)
+function atmos_mix($path)
 {
     $path = '/' . ltrim($path, '/');
 
