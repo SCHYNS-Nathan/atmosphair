@@ -16,7 +16,7 @@
     <link rel="icon" type="image/x-icon" href="<?= get_template_directory_uri(); ?>/images/favicon/favicon.ico">
     <title><?= wp_title('|', false, 'right') . get_bloginfo('name') ?></title>
 
-    <link rel="stylesheet" type="text/css" href="<?= atmos_mix('/css/style.css') ?>">
+    <link rel="stylesheet" type="text/css" href="<?= get_template_directory_uri(); ?>/main.scss">
     <script type="text/javascript" src="<?= atmos_mix('js/script.js') ?>" defer></script>
 </head>
 <body>
