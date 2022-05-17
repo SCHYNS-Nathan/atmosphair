@@ -243,9 +243,6 @@ function atmos_get_socials($count = 2, $search = null)
 }
 
 
-
-
-
 // Enregistrer les zones de menus
 
 register_nav_menu('primary', 'Navigation principale (haut de page)');
