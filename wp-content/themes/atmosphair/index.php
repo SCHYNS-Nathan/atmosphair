@@ -1,8 +1,10 @@
 <?php get_header(); ?>
 <main class="layout">
-    <h2 class="main__title"><?= __('Pour un air plus sain au coeur de la ville !','atmosph\'air'); ?></h2>
+    <div class="main__header">
+        <h2 class="main__title"><?= __('Pour un air plus','atmosph\'air') . "<br>" . __('sain au coeur de la ville !','atmosph\'air'); ?></h2>
+    </div>
     <section class="main__stats">
-        <h3 class="stats__title"><?= __('La polution en quelques chiffres','atmosph\'air'); ?></h3>
+        <h3 class="stats__title hidden"><?= __('La polution en quelques chiffres','atmosph\'air'); ?></h3>
         <div class="stats__stat">
             <p class="stats__number">
                 <strong>50%</strong>

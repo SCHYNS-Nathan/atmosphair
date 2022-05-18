@@ -1,7 +1,78 @@
 @import "_reset.scss";
+@import "header.scss";
+
+/* ---------- CSS LOAD FONT ---------- */
+@font-face {
+    font-family: LivvicBlack;
+    src: url("../fonts/Livvic-Black.ttf");
+    font-display: auto;
+}
+@font-face {
+    font-family: LivvicBold;
+    src: url("../fonts/Livvic-Bold.ttf");
+    font-display: auto;
+}
+@font-face {
+    font-family: Livvic;
+    src: url("../fonts/Livvic-Regular.ttf");
+    font-display: auto;
+}
+
 
 /* ---------- CSS ---------- */
-h1 {
-  color: #ff1818;
-  font-size: 20px;
+body {
+    font-family: Livvic, sans-serif;
+    background-color: #ededed;
+    line-height: 1.4;
 }
+em {
+    font-family: LivvicBold, sans-serif;
+}
+.hidden {
+    position: absolute;
+    left: -10000px;
+    font-size: 0;
+}
+
+
+.main__header {
+    background-image: url("../images/bg_1.jpg");
+    background-size: cover;
+    height: 100vh;
+}
+.main__title {
+    font-size: 50px;
+    color: #ededed;
+    padding: 70vh 80px 0;
+}
+
+
+.main__stats, .main__presentation {
+    background-color: #000;
+    color: #fff;
+    padding: 150px 80px 0;
+}
+.main__stats {
+    display: flex;
+    justify-content: space-between;
+}
+.stats__stat {
+    display: inline-block;
+    text-align: center;
+    min-width: 10vw;
+    max-width: 20vw;
+}
+.stats__stat:nth-child(2n) {
+    margin-top: 100px;
+}
+.stats__number {
+    font-family: LivvicBlack, sans-serif;
+    color: #DDA458;
+    font-size: 75px;
+}
+.stats__text {
+    margin-top: 20px;
+}
+
+
+.main
