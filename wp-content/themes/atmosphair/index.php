@@ -41,7 +41,7 @@
     </section>
     <section class="main__actors">
         <h3 class="actors__title hidden"><?= __('Les acteurs du projet','atmosph\'air'); ?></h3>
-        <img class="actors__image" src="<?= get_template_directory_uri(); ?>/images/actors.jpg" alt="<?= __('Du personnel de l\'ISSeP et des étudiant de la HEPL ayant travaillés sur Antilope','atmosph\'air'); ?>">
+        <img class="actors__image" src="<?= get_template_directory_uri(); ?>/src/images/actors.jpg" alt="<?= __('Du personnel de l\'ISSeP et des étudiant de la HEPL ayant travaillés sur Antilope','atmosph\'air'); ?>">
         <p class="actors__text">
             <?= __('Afin que ce droit soit respecté, la section Électronique & Systèmes Embarqués de la Haute École de la Province de Liège (HEPL) s’est alliée à l’Institut Scientifique de Service Publique (ISSeP) pour créer une gamme de capteurs d’air.','atmosph\'air'); ?>
         </p>
@@ -77,42 +77,44 @@
             endwhile; else:  ?>
                 <p class="projects__error"><?= __('Il n\'y a pas d\'article à afficher pour le moment, revenez plus tard.','atmosph\'air'); ?></p>
             <?php endif; ?>
-            <div class="articles__container">
+            <li class="main__item">
                 <a class="article__link" href="<?= site_url('publications') ?>">
                     <img class="article__image" src="<?= get_template_directory_uri(); ?>/images/more_articles.jpg" alt="Photo d'un tas de publications.">
                     <h4 class="article__title"><?= __('Voir toutes les publications nous concernant','atmosphair') ?></h4>
                 </a>
-            </div>
+            </li>
         </ul>
     </section>
     <section class="main__contact">
-        <h3 class="contact__title"><?= __('Une question ? Contactez-nous !','atmosphair') ?></h3>
-        <form class="contact__form">
-            <label class="contact__label" for="name">Votre nom</label>
-            <input class="contact__input" id="name" name="name">
+        <div class="contact__container">
+            <h3 class="contact__title"><?= __('Une question ?','atmosphair') . "<br>" .  __('Contactez-nous !','atmosphair'); ?></h3>
+            <form class="contact__form">
+                <label class="contact__label" for="name">Votre nom</label>
+                <input class="contact__input" id="name" name="name" placeholder="Nom" required>
 
-            <label class="contact__label" for="firstname">Votre prénom</label>
-            <input class="contact__input" id="firstname" name="firstname">
+                <label class="contact__label" for="firstname">Votre prénom</label>
+                <input class="contact__input" id="firstname" name="firstname" placeholder="Prénom" required>
 
-            <label class="contact__label" for="mail">Votre adresse mail</label>
-            <input class="contact__input" id="mail" name="mail">
+                <label class="contact__label" for="mail">Votre adresse mail</label>
+                <input class="contact__input" id="mail" name="mail" placeholder="nom.prénom@email.com" required>
 
-            <label class="contact__label" for="subject">Sujet</label>
-            <select class="contact__select" id="subject" name="subject">
-                <option value="issep"><?= __('Question à propos des résultats','atmosphair') ?></option>
-                <option value="hepl">Question à propos de la section électronique et systèmes embarqués</option>
-                <option value="issep">Achat pour le secteur privé</option>
-                <option value="issep">Achat pour le secteur public</option>
-            </select>
+                <label class="contact__label" for="subject">Sujet</label>
+                <select class="contact__select" id="subject" name="subject">
+                    <option value="issep"><?= __('Question à propos des résultats','atmosphair') ?></option>
+                    <option value="hepl">Question à propos de la section électronique et systèmes embarqués</option>
+                    <option value="issep">Achat pour le secteur privé</option>
+                    <option value="issep">Achat pour le secteur public</option>
+                </select>
 
-            <label class="contact__label" for="message">Votre message</label>
-            <input class="contact__input" id="message" name="message">
+                <label class="contact__label" for="message">Votre message</label>
+                <textarea class="contact__input" id="message" name="message" placeholder="Écrivez votre message ici" required></textarea>
 
-            <input class="contact__submit" type="submit">
-        </form>
+                <input class="contact__submit" type="submit">
+            </form>
+        </div>
     </section>
     <section class="main__socials">
-        <h3 class="socials__title"><?= __('Suivez-nous sur nos réseaux sociaux !','atmosphair') ?></h3>
+        <h3 class="socials__title"><?= __('Suivez-nous sur nos réseaux sociaux !','atmosphair'); ?></h3>
         <ul class="socials__list">
             <?php if(($socials = atmos_get_socials(2))->have_posts()): while($socials->have_posts()): $socials->the_post();
                 include (__DIR__ . '/partials/social.php');

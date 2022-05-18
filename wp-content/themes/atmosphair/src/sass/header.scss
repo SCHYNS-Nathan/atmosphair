@@ -13,7 +13,7 @@
     align-items: center;
 }
 .header__link .header__title {
-    margin-left: 30px;
+    margin-left: 25px;
 }
 .header__title {
     display: inline;
@@ -25,10 +25,13 @@
 }
 .header__item {
     display: inline-block;
-    margin: 20px 30px 0 0;
+    margin: 17.5px 0 0 20px;
     font-size: 20px;
 }
 
+.header__list {
+    margin-right: 50px;
+}
 .header__item:hover {
     text-decoration: underline;
     color: #fff;
