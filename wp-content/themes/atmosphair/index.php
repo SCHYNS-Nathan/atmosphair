@@ -40,7 +40,7 @@
         </p>
     </section>
     <section class="main__actors">
-        <h3 class="actors__title"><?= __('Les acteurs du projet','atmosph\'air'); ?></h3>
+        <h3 class="actors__title hidden"><?= __('Les acteurs du projet','atmosph\'air'); ?></h3>
         <img class="actors__image" src="<?= get_template_directory_uri(); ?>/images/actors.jpg" alt="<?= __('Du personnel de l\'ISSeP et des étudiant de la HEPL ayant travaillés sur Antilope','atmosph\'air'); ?>">
         <p class="actors__text">
             <?= __('Afin que ce droit soit respecté, la section Électronique & Systèmes Embarqués de la Haute École de la Province de Liège (HEPL) s’est alliée à l’Institut Scientifique de Service Publique (ISSeP) pour créer une gamme de capteurs d’air.','atmosph\'air'); ?>
@@ -48,8 +48,10 @@
         <a class="actors__link" href="<?= site_url('a-propos/'); ?>"><?= __('Les acteurs du projet','atmosph\'air'); ?></a>
     </section>
     <section class="main__projects">
-        <h3 class="projects__title"><?= __('Découvrez nos projets !','atmosph\'air'); ?></h3>
-        <a class="projects__link" href="<?= site_url('projets/'); ?>"><?= __('Voir tous nos projets','atmosphair') ?></a>
+        <div class="projects__container">
+            <h3 class="projects__title"><?= __('Découvrez nos projets !','atmosph\'air'); ?></h3>
+            <a class="projects__link" href="<?= site_url('projets/'); ?>"><?= __('Voir tous nos projets','atmosphair') ?></a>
+        </div>
         <ul class="projects__list">
             <?php if(($modules = atmos_get_modules_for_index(5))->have_posts()): while($modules->have_posts()): $modules->the_post();
                 include (__DIR__ . '/partials/module.php');
@@ -65,23 +67,23 @@
         </ul>
     </section>
     <section class="main__articles">
-        <h3 class="articles__title"><?= __('On parle de nous !','atmosphair') ?></h3>
-        <a class="articles__link"><?= __('Voir toutes les publications','atmosphair') ?></a>
         <div class="articles__container">
-            <ul class="articles__list">
-                <?php if(($publications = atmos_get_publications_for_index(5))->have_posts()): while($publications->have_posts()): $publications->the_post();
-                    include (__DIR__ . '/partials/publication.php');
-                endwhile; else:  ?>
-                    <p class="projects__error"><?= __('Il n\'y a pas d\'article à afficher pour le moment, revenez plus tard.','atmosph\'air'); ?></p>
-                <?php endif; ?>
-                <div class="articles__container">
-                    <a class="article__link" href="<?= site_url('publications') ?>">
-                        <img class="article__image" src="<?= get_template_directory_uri(); ?>/images/more_articles.jpg" alt="Photo d'un tas de publications.">
-                        <h4 class="article__title"><?= __('Voir toutes les publications nous concernant','atmosphair') ?></h4>
-                    </a>
-                </div>
-            </ul>
+            <h3 class="articles__title"><?= __('On parle de nous !','atmosphair') ?></h3>
+            <a class="articles__link" href="<?= site_url('publications/'); ?>"><?= __('Voir toutes les publications','atmosphair') ?></a>
         </div>
+        <ul class="articles__list">
+            <?php if(($publications = atmos_get_publications_for_index(5))->have_posts()): while($publications->have_posts()): $publications->the_post();
+                include (__DIR__ . '/partials/publication.php');
+            endwhile; else:  ?>
+                <p class="projects__error"><?= __('Il n\'y a pas d\'article à afficher pour le moment, revenez plus tard.','atmosph\'air'); ?></p>
+            <?php endif; ?>
+            <div class="articles__container">
+                <a class="article__link" href="<?= site_url('publications') ?>">
+                    <img class="article__image" src="<?= get_template_directory_uri(); ?>/images/more_articles.jpg" alt="Photo d'un tas de publications.">
+                    <h4 class="article__title"><?= __('Voir toutes les publications nous concernant','atmosphair') ?></h4>
+                </a>
+            </div>
+        </ul>
     </section>
     <section class="main__contact">
         <h3 class="contact__title"><?= __('Une question ? Contactez-nous !','atmosphair') ?></h3>

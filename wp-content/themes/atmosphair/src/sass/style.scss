@@ -25,6 +25,9 @@ body {
     background-color: #ededed;
     line-height: 1.4;
 }
+h3 {
+    font-size: 30px;
+}
 em {
     font-family: LivvicBold, sans-serif;
 }
@@ -33,7 +36,6 @@ em {
     left: -10000px;
     font-size: 0;
 }
-
 
 .main__header {
     background-image: url("../images/bg_1.jpg");
@@ -74,5 +76,83 @@ em {
     margin-top: 20px;
 }
 
+.main__presentation {
+    text-align: center;
+}
+.presentation__title {
+    font-size: 30px;
+    color: #DDA458;
+}
+.presentation__text {
+    margin-top: 20px;
+}
+.presentation__conclusion {
+    font-size: 20px;
+    margin-top: 20px;
+    padding-bottom: 200px;
+}
 
-.main
+.main__actors {
+    background-color: #fff;
+    margin: -40px auto 100px;
+    width: 80vw;
+    height: 300px;
+    min-width: 680px;
+    max-width: 800px;
+}
+.actors__image {
+    width: 200px;
+    height: 300px;
+    margin: -40px 80px 0 -40px;
+    float: left;
+}
+.actors__text {
+    margin: 0 auto 0;
+    padding: 40px 80px 0;
+}
+.actors__link {
+    background-color: #000;
+    color: #fff;
+    padding: 20px 40px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: LivvicBlack, sans-serif;
+}
+
+
+.main__projects {
+    padding: 0 80px 0;
+}
+.projects__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.projects__link {
+    background-color: #fff;
+    color: #000;
+    padding: 20px 40px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: LivvicBlack, sans-serif;
+}
+
+
+.main__articles {
+    background-color: #000;
+    color: #fff;
+    padding: 80px 80px 0;
+}
+.articles__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.articles__link {
+    background-color: #fff;
+    color: #000;
+    padding: 20px 40px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: LivvicBlack, sans-serif;
+}
