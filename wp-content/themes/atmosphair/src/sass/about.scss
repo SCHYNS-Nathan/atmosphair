@@ -1,0 +1,80 @@
+.main__about .main__video {
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+}
+.main__about .main__title {
+    position: absolute;
+    color: #fff;
+    padding: 0;
+    top: 60vh;
+    margin-left: 80px;
+}
+
+
+.main__about .main__actors {
+    background-color: #000;
+    color: #fff;
+    margin: -10px 0 0;
+    padding: 0 80px;
+    width: 100vw;
+    height: unset;
+    max-width: unset;
+}
+.main__about .actors__title {
+    padding-top: 80px;
+}
+
+.main__about .actors__actor {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100px 100px;
+}
+.main__about .actors__actor div {
+    grid-column: 1/2;
+}
+.main__about .actor__fig {
+    grid-column: 2/3;
+}
+
+.main__morals {
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 80px;
+}
+.morals__moral:nth-child(n+2) {
+    margin-left: 40px;
+}
+.morals__moral {
+    text-align: center;
+}
+.morals__icon {
+    width: 80px;
+    height: 80px;
+}
+.morals__title {
+    font-family: LivvicBlack, sans-serif;
+    color: #DDA458;
+    font-size: 30px;
+    border-bottom: 1px solid #DDA458;
+}
+.morals__text {
+    margin-top: 10px;
+}
+
+
+.main__timeline {
+    padding: 80px;
+}
+.timeline__container {
+    margin: 0 -80px 0;
+    width: 100vw;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+.timeline__entry {
+    display: inline-block;
+    margin-left: 80px;
+}
