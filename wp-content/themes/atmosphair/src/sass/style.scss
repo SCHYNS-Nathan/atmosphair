@@ -1,5 +1,6 @@
 @import "_reset.scss";
 @import "header.scss";
+@import "footer.scss";
 
 /* ---------- CSS LOAD FONT ---------- */
 @font-face {
@@ -24,6 +25,7 @@ body {
     font-family: Livvic, sans-serif;
     background-color: #ededed;
     line-height: 1.4;
+    overflow-x: hidden;
 }
 h3, h2 {
     font-size: 30px;
@@ -119,6 +121,9 @@ em {
     text-transform: uppercase;
     font-family: LivvicBlack, sans-serif;
 }
+.actors__link:hover {
+    background-color: #DDA458;
+}
 
 
 .main__projects {
@@ -136,6 +141,25 @@ em {
     text-decoration: none;
     text-transform: uppercase;
     font-family: LivvicBlack, sans-serif;
+}
+.projects__link:hover {
+    background-color: #DDA458;
+    color: #fff;
+}
+.projects__list {
+    width: 100vw;
+    margin: 40px 0 0 -80px;
+    padding-bottom: 20px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+.projects__list li {
+    display: inline-block;
+    width: 400px;
+    margin-left: 40px;
+    white-space: normal;
+    vertical-align: top;
 }
 
 
@@ -157,15 +181,27 @@ em {
     text-transform: uppercase;
     font-family: LivvicBlack, sans-serif;
 }
+.articles__link:hover {
+    background-color: #DDA458;
+    color: #fff;
+}
 .articles__list {
     width: 100vw;
-    margin-left: -80px;
+    margin: 40px 0 0 -80px;
+    padding-bottom: 20px;
     overflow-x: auto;
     overflow-y: hidden;
+    white-space: nowrap;
 }
 .articles__list li {
     display: inline-block;
     width: 400px;
+    margin-left: 40px;
+    white-space: normal;
+    vertical-align: top;
+}
+.articles__list li:first-of-type {
+    margin-left: 80px;
 }
 
 
@@ -217,6 +253,9 @@ textarea.contact__input {
     font-family: LivvicBlack, sans-serif;
     border: none;
 }
+.contact__submit:hover {
+    background-color: #DDA458;
+}
 
 
 .main__socials {
@@ -227,9 +266,10 @@ textarea.contact__input {
 }
 .socials__item {
     display: inline-block;
-    margin: 20px 20px 80px;
+    margin: 20px 20px 160px;
 }
 .socials__item img {
     width: 80px;
     height: 80px;
 }
+

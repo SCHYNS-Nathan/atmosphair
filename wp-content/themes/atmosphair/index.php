@@ -56,7 +56,6 @@
             <?php if(($modules = atmos_get_modules_for_index(5))->have_posts()): while($modules->have_posts()): $modules->the_post();
                 include (__DIR__ . '/partials/module.php');
             endwhile; else:  ?>
-                <p class="projects__error"><?= __('Il n\'y a pas de modules à afficher pour le moment, revenez plus tard.','atmosph\'air'); ?></p>
             <?php endif; ?>
             <li class="projects__item">
                 <div class="projects__project">
@@ -75,7 +74,6 @@
             <?php if(($publications = atmos_get_publications_for_index(5))->have_posts()): while($publications->have_posts()): $publications->the_post();
                 include (__DIR__ . '/partials/publication.php');
             endwhile; else:  ?>
-                <p class="projects__error"><?= __('Il n\'y a pas d\'article à afficher pour le moment, revenez plus tard.','atmosph\'air'); ?></p>
             <?php endif; ?>
             <li class="main__item">
                 <a class="article__link" href="<?= site_url('publications') ?>">
