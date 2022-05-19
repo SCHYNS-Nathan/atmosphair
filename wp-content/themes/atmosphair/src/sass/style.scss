@@ -193,22 +193,28 @@ em {
     overflow-y: hidden;
     white-space: nowrap;
 }
-.articles__list li {
+.articles__list .main__item {
     display: inline-block;
     width: 400px;
-    height: 600px;
+    height: 400px;
     margin-left: 40px;
     white-space: normal;
     vertical-align: top;
+    background-size: cover;
 }
-.articles__list li:first-of-type {
+.articles__list .main__item:first-of-type {
     margin-left: 80px;
 }
+.articles__list .main__item:last-of-type {
+    margin-right: 80px;
+}
 .main__articles .article__thumb img {
-    position: absolute;
     z-index: auto;
     width: 400px;
-    height: 600px;
+    height: 400px;
+}
+.article__excerpt {
+    display: none;
 }
 
 

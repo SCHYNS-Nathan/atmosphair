@@ -75,9 +75,8 @@
                 include (__DIR__ . '/partials/publication.php');
             endwhile; else:  ?>
             <?php endif; ?>
-            <li class="main__item">
+            <li class="main__item" style="background-image: url(<?= get_template_directory_uri(); ?>/src/images/more_articles.jpg)">
                 <a class="article__link" href="<?= site_url('publications') ?>">
-                    <img class="article__image" src="<?= get_template_directory_uri(); ?>/images/more_articles.jpg" alt="Photo d'un tas de publications.">
                     <h4 class="article__title"><?= __('Voir toutes les publications nous concernant','atmosphair') ?></h4>
                 </a>
             </li>
