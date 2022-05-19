@@ -5,7 +5,7 @@
             <figure class="project__fig">
                 <?= get_the_post_thumbnail(null, 'medium', ['class' => 'actor__thumb']); ?>
             </figure>
-            <img class="project__icon" src="<?= get_template_directory_uri() . "/images/" . get_field('nom', false, false) . ".svg"; ?>" alt="<?= __('Icône du projet','atmosph\'air'); ?>">
+            <img class="project__icon" src="<?= get_template_directory_uri() . "/src/images/" . get_field('nom', false, false) . ".svg"; ?>" alt="<?= __('Icône du projet','atmosph\'air'); ?>">
             <p class="project__description" itemprop="description">
                 <?= get_field('description', false, false); ?>
             </p>
