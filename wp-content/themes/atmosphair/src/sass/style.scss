@@ -196,12 +196,19 @@ em {
 .articles__list li {
     display: inline-block;
     width: 400px;
+    height: 600px;
     margin-left: 40px;
     white-space: normal;
     vertical-align: top;
 }
 .articles__list li:first-of-type {
     margin-left: 80px;
+}
+.main__articles .article__thumb img {
+    position: absolute;
+    z-index: auto;
+    width: 400px;
+    height: 600px;
 }
 
 
