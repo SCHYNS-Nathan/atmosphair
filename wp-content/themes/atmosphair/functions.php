@@ -14,9 +14,9 @@ require_once(__DIR__ . '/Forms/Validators/RequiredValidator.php');
 require_once(__DIR__ . '/Forms/Validators/EmailValidator.php');
 require_once(__DIR__ . '/Forms/Validators/AcceptedValidator.php');
 
-add_action('init', 'atmosphair_boot_theme', 1);
+add_action('init', 'atmos_boot_theme', 1);
 
-function atmosphair_boot_theme()
+function atmos_boot_theme()
 {
     load_theme_textdomain('atmosphair', __DIR__ . '/locales');
 
@@ -124,39 +124,124 @@ register_post_type('date', [
     'supports' => ['title','editor','thumbnail'],
     'rewrite' => ['slug' => 'dates'],
 ]);
+register_post_type('social', [
+    'label' => 'Socials',
+    'labels' => [
+        'name' => 'Socials',
+        'singular_name' => 'Social',
+    ],
+    'description' => 'Vos réseaux sociaux.',
+    'public' => true,
+    'has_archive' => true,
+    'menu_position' => 2,
+    'menu_icon' => 'dashicons-share',
+    'supports' => ['title','editor','thumbnail'],
+    'rewrite' => ['slug' => 'dates'],
+]);
 
 
 // Récupérer les customs posts types via requête wordpress
-function atmosphair_get_module($count = 5, $search = null)
+function atmos_get_modules_for_index($count = 5, $search = null)
 {
     $modules = new DW_CustomSearchQuery([
         'post_type' => 'module',
         'orderby' => 'date',
-        'order' => 'DESC',
+        'order' => 'ASC',
         'posts_per_page' => $count,
         's' => strlen($search) ? $search : null,
     ]);
+
     return $modules;
 }
-
-
-
-/* Récupérer les trips via une requête Wordpress
-function dw_get_trips($count = 20, $search = null)
+function atmos_get_publications_for_index($count = 5, $search = null)
 {
-    // 1. on instancie l'objet WP_Query
-    $trips = new DW_CustomSearchQuery([
-        'post_type' => 'trip',
+    $publications = new DW_CustomSearchQuery([
+        'post_type' => 'publication',
+        'orderby' => 'date',
+        'order' => 'ASC',
+        'posts_per_page' => $count,
+        's' => strlen($search) ? $search : null,
+    ]);
+
+    return $publications;
+}
+
+function atmos_get_actors($count = 2, $search = null)
+{
+    $actors = new DW_CustomSearchQuery([
+        'post_type' => 'actor',
+        'orderby' => 'date',
+        'order' => 'ASC',
+        'posts_per_page' => $count,
+        's' => strlen($search) ? $search : null,
+    ]);
+
+    return $actors;
+}
+function atmos_get_morals($count = 3, $search = null)
+{
+    $morals = new DW_CustomSearchQuery([
+        'post_type' => 'moral',
         'orderby' => 'date',
         'order' => 'DESC',
         'posts_per_page' => $count,
         's' => strlen($search) ? $search : null,
     ]);
 
-    // 2. on retourne l'objet WP_Query
-    return $trips;
+    return $morals;
 }
-*/
+function atmos_get_dates($count = 10, $search = null)
+{
+    $dates = new DW_CustomSearchQuery([
+        'post_type' => 'date',
+        'orderby' => 'date',
+        'order' => 'ASC',
+        'posts_per_page' => $count,
+        's' => strlen($search) ? $search : null,
+    ]);
+
+    return $dates;
+}
+
+function atmos_get_modules_for_project($count = 6, $search = null)
+{
+    $modules = new DW_CustomSearchQuery([
+        'post_type' => 'module',
+        'orderby' => 'date',
+        'order' => 'ASC',
+        'posts_per_page' => $count,
+        's' => strlen($search) ? $search : null,
+    ]);
+
+    return $modules;
+}
+
+function atmos_get_publications($count = 10, $search = null)
+{
+    $publications = new DW_CustomSearchQuery([
+        'post_type' => 'publication',
+        'orderby' => 'date',
+        'order' => 'ASC',
+        'posts_per_page' => $count,
+        's' => strlen($search) ? $search : null,
+    ]);
+
+    return $publications;
+}
+
+function atmos_get_socials($count = 2, $search = null)
+{
+    $socials = new DW_CustomSearchQuery([
+        'post_type' => 'social',
+        'orderby' => 'date',
+        'order' => 'ASC',
+        'posts_per_page' => $count,
+        's' => strlen($search) ? $search : null,
+    ]);
+
+    return $socials;
+}
+
 
 // Enregistrer les zones de menus
 
@@ -165,7 +250,7 @@ register_nav_menu('footer', 'Navigation de pied de page');
 register_nav_menu('legals', 'Lien vers les mentions légales et autres');
 
 // Fonction pour récupérer les éléments d'un menu sous forme d'un tableau d'objets
-function atmosphair_get_menu_items($location)
+function atmos_get_menu_items($location)
 {
     $items = [];
 
@@ -205,9 +290,6 @@ function atmosphair_get_menu_items($location)
     return $items;
 }
 
-
-
-
 // Gérer l'envoi de formulaire personnalisé
 
 add_action('admin_post_submit_contact_form', 'dw_handle_submit_contact_form');
@@ -240,7 +322,7 @@ function dw_get_contact_field_error($field)
 
 // Fonction qui charge les assets compilés et retourne leure chemin absolu
 
-function dw_mix($path)
+function atmos_mix($path)
 {
     $path = '/' . ltrim($path, '/');
 
@@ -276,7 +358,7 @@ function dw_restrict_search_query($query) {
 add_filter('pre_get_posts','dw_restrict_search_query');
 
 // Fonction pour diriger vers une page template
-function atmoshphair_get_template_post(string $template) {
+function atmos_get_template_post(string $template) {
     $query = new WP_Query([
         'post-type' => 'page',
         'post-status' => 'published',
@@ -295,6 +377,5 @@ function atmoshphair_get_template_post(string $template) {
 function dw_include(string $partial, array $variables = [])
 {
     extract($variables);
-
     include(__DIR__ . '/partials/' . $partial . '.php');
 }
