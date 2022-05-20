@@ -1,0 +1,56 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 80px 40px;
+    background-color: #fff;
+}
+
+.footer__list {
+    margin-top: 40px;
+}
+.footer__item {
+    margin-top: 8px;
+}
+.footer__link {
+    text-decoration: none;
+    color: #000;
+}
+.footer__link:hover {
+    text-decoration: underline;
+}
+
+.footer__coordinate {
+    margin: 40px 0 0 60px;
+}
+.coordinate__title {
+    font-size: 16px;
+}
+.coordinate__div {
+    display: inline-block;
+    font-size: 12px;
+    margin: 8px 16px 0 0;
+}
+.coordinate__subtitle {
+    font-family: LivvicBold, sans-serif;
+}
+.coordinate__adress {
+    margin-top: 4px;
+}
+.coordinate__phone {
+    margin-top: 4px;
+}
+.coordinate__mail {
+    margin-top: 4px;
+    color: #000;
+}
+
+.footer__logos {
+    padding: 40px 0 0 60px;
+    border-left: 2px solid #000;
+}
+.logos__image {
+    margin-bottom: 8px;
+}
+.logos__svg {
+    height: 40px;
+}

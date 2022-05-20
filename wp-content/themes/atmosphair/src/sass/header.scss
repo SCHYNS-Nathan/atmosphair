@@ -1,0 +1,39 @@
+.header__nav {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    min-width: 100vw;
+    background-color: rgba(0,0,0,.75);
+    z-index: 10;
+}
+.header__link {
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+.header__link .header__title {
+    margin-left: 25px;
+}
+.header__title {
+    display: inline;
+    font-family: LivvicBold, sans-serif;
+    font-size: 30px;
+}
+.header__logo {
+    display: inline;
+}
+.header__item {
+    display: inline-block;
+    margin: 17.5px 0 0 20px;
+    font-size: 20px;
+}
+
+.header__list {
+    margin-right: 50px;
+}
+.header__item:hover {
+    text-decoration: underline;
+    color: #fff;
+}
