@@ -1,5 +1,5 @@
 <div class="actors__actor" itemscope itemtype="https://schema.org/Organization">
-    <div>
+    <div class="actor__container">
         <h4 class="actor__title" itemprop="name"><?= get_field('nom', false, false); ?></h4>
         <p class="actor__text">
             <?= get_field('description', false, false); ?>
@@ -7,6 +7,6 @@
         <a class="actor__link" href="<?= get_field('lien', false, false); ?>"><?= __('Visiter le site','atmosph\'air'); ?></a>
     </div>
     <figure class="actor__fig">
-        <?= get_the_post_thumbnail(null, 'medium', ['class' => 'actor__thumb']); ?>
+        <?= get_the_post_thumbnail(null, 'large', ['class' => 'actor__thumb']); ?>
     </figure>
 </div>

@@ -20,9 +20,6 @@ $border-space: 160px;
 
 @import "header.scss";
 @import "footer.scss";
-@import "about.scss";
-@import "projects.scss";
-@import "publications.scss";
 
 
 body {
@@ -298,7 +295,7 @@ em {
     margin-top: 40px;
     font-family: LivvicBold, sans-serif;
 }
-.contact__input {
+.contact__input, .contact__select {
     font-family: Livvic, sans-serif;
     display: block;
     width: 100%;
@@ -347,3 +344,8 @@ textarea.contact__input {
     height: 80px;
 }
 
+@import "about.scss";
+@import "projects.scss";
+@import "single-project.scss";
+@import "publications.scss";
+@import "contact.scss";
