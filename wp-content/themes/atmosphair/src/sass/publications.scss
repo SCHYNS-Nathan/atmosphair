@@ -1,0 +1,38 @@
+.publications .main__container {
+	background-color: #000;
+	display: flex;
+	justify-content: space-between;
+	padding: 160px 80px 320px;
+}
+
+.publications .main__title {
+	padding: 0;
+}
+.publications .main__filter {
+	height: 80px;
+	background-color: #fff;
+	color: #000;
+	padding: 20px 60px;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-family: LivvicBlack, sans-serif;
+}
+
+.publications .main__list {
+	display: grid;
+	grid-template-areas:
+		"a a a"
+		". . ."
+		". . ."
+		". . .";
+	margin: -160px 80px 80px;
+	grid-gap: 40px;
+}
+.publications .main__item:first-child {
+	grid-area: a;
+	margin-bottom: 80px;
+}
+.publications .main__item {
+	background-color: #fff;
+	height: 400px;
+}

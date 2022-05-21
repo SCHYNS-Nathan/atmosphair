@@ -1,0 +1,711 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face {
+  font-family: LivvicBlack;
+  src: url("../../src/fonts/Livvic-Black.ttf");
+  font-display: auto;
+}
+@font-face {
+  font-family: LivvicBold;
+  src: url("../../src/fonts/Livvic-Bold.ttf");
+  font-display: auto;
+}
+@font-face {
+  font-family: Livvic;
+  src: url("../../src/fonts/Livvic-Regular.ttf");
+  font-display: auto;
+}
+.header__nav {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  height: 60px;
+  min-width: 100vw;
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: 10;
+}
+
+.header__link {
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.header__link .header__title {
+  margin-left: 25px;
+}
+
+.header__title {
+  display: inline;
+  font-family: LivvicBold, sans-serif;
+  font-size: 30px;
+}
+
+.header__logo {
+  display: inline;
+}
+
+.header__item {
+  display: inline-block;
+  margin: 17.5px 0 0 20px;
+  font-size: 20px;
+}
+
+.header__list {
+  margin-right: 50px;
+}
+
+.header__item:hover {
+  text-decoration: underline;
+  color: #fff;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 80px 40px;
+  background-color: #fff;
+}
+
+.footer__list {
+  margin-top: 40px;
+}
+
+.footer__item {
+  margin-top: 8px;
+}
+
+.footer__link {
+  text-decoration: none;
+  color: #000;
+}
+
+.footer__link:hover {
+  text-decoration: underline;
+}
+
+.footer__coordinate {
+  margin: 40px 0 0 60px;
+}
+
+.coordinate__title {
+  font-size: 16px;
+}
+
+.coordinate__div {
+  display: inline-block;
+  font-size: 12px;
+  margin: 8px 16px 0 0;
+}
+
+.coordinate__subtitle {
+  font-family: LivvicBold, sans-serif;
+}
+
+.coordinate__adress {
+  margin-top: 4px;
+}
+
+.coordinate__phone {
+  margin-top: 4px;
+}
+
+.coordinate__mail {
+  margin-top: 4px;
+  color: #000;
+}
+
+.footer__logos {
+  padding: 40px 0 0 60px;
+  border-left: 2px solid #000;
+}
+
+.logos__image {
+  margin-bottom: 8px;
+}
+
+.logos__svg {
+  height: 40px;
+}
+
+.main__about .main__video {
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+}
+
+.main__about .main__title {
+  position: absolute;
+  color: #fff;
+  padding: 0;
+  top: 60vh;
+  margin-left: 80px;
+}
+
+.main__about .main__actors {
+  background-color: #000;
+  color: #fff;
+  margin: -10px 0 0;
+  padding: 0 80px;
+  width: 100vw;
+  height: unset;
+  max-width: unset;
+}
+
+.main__about .actors__title {
+  padding-top: 80px;
+}
+
+.main__about .actors__actor {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 100px 100px;
+}
+
+.main__about .actors__actor div {
+  grid-column: 1/2;
+}
+
+.main__about .actor__fig {
+  grid-column: 2/3;
+}
+
+.main__morals {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 80px;
+}
+
+.morals__moral:nth-child(n+2) {
+  margin-left: 40px;
+}
+
+.morals__moral {
+  text-align: center;
+}
+
+.morals__icon {
+  width: 80px;
+  height: 80px;
+}
+
+.morals__title {
+  font-family: LivvicBlack, sans-serif;
+  color: #DDA458;
+  font-size: 30px;
+  border-bottom: 1px solid #DDA458;
+}
+
+.morals__text {
+  margin-top: 10px;
+}
+
+.main__timeline {
+  padding: 80px;
+}
+
+.timeline__container {
+  margin: 0 -80px 0;
+  width: 100vw;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+
+.timeline__entry {
+  display: inline-block;
+  margin-left: 80px;
+}
+
+.projects .main__presentation {
+  background-image: url("../../src/images/bg_3.jpg");
+  background-size: cover;
+  height: 100vh;
+}
+
+.projects .main__presentation .presentation__title {
+  margin: 30vh auto 0;
+  padding-top: 10vh;
+  border-top: 2px solid #DDA458;
+  width: 75vw;
+}
+
+.projects .main__title {
+  color: #000;
+  padding-top: 80px;
+  margin-bottom: 40px;
+}
+
+.projects .projects__item {
+  width: 100vw;
+  display: flex;
+  margin-bottom: 80px;
+}
+
+.projects .projects__item:nth-child(2n) {
+  justify-content: flex-end;
+}
+
+.projects .projects__project {
+  background-color: #fff;
+  width: 80vw;
+}
+
+.publications .main__container {
+  background-color: #000;
+  display: flex;
+  justify-content: space-between;
+  padding: 160px 80px 320px;
+}
+
+.publications .main__title {
+  padding: 0;
+}
+
+.publications .main__filter {
+  height: 80px;
+  background-color: #fff;
+  color: #000;
+  padding: 20px 60px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: LivvicBlack, sans-serif;
+}
+
+.publications .main__list {
+  display: grid;
+  grid-template-areas: "a a a" ". . ." ". . ." ". . .";
+  margin: -160px 80px 80px;
+  grid-gap: 40px;
+}
+
+.publications .main__item:first-child {
+  grid-area: a;
+  margin-bottom: 80px;
+}
+
+.publications .main__item {
+  background-color: #fff;
+  height: 400px;
+}
+
+body {
+  font-family: Livvic, sans-serif;
+  background-color: #ededed;
+  line-height: 1.4;
+  overflow-x: hidden;
+}
+
+h3, h2 {
+  font-size: 30px;
+  font-family: LivvicBold, sans-serif;
+}
+
+em {
+  font-family: LivvicBold, sans-serif;
+}
+
+.hidden {
+  position: absolute;
+  left: -10000px;
+  font-size: 0;
+}
+
+.main__header {
+  background-image: url("../../src/images/bg_1.jpg");
+  background-size: cover;
+  height: 100vh;
+}
+
+.main__title {
+  font-size: 50px;
+  color: #ededed;
+  padding: 70vh 80px 0;
+}
+
+.main__stats, .main__presentation {
+  background-color: #000;
+  color: #fff;
+  padding: 150px 160px 0;
+}
+
+.main__stats {
+  display: flex;
+  justify-content: space-between;
+}
+
+.stats__stat {
+  display: inline-block;
+  text-align: center;
+  min-width: 10vw;
+  max-width: 20vw;
+}
+
+.stats__stat:nth-child(2n) {
+  margin-top: 100px;
+}
+
+.stats__number {
+  font-family: LivvicBlack, sans-serif;
+  color: #DDA458;
+  font-size: 75px;
+}
+
+.stats__text {
+  margin-top: 20px;
+}
+
+.main__presentation {
+  text-align: center;
+}
+
+.presentation__title {
+  font-size: 30px;
+  color: #DDA458;
+}
+
+.presentation__text {
+  margin-top: 20px;
+}
+
+.presentation__conclusion {
+  font-size: 20px;
+  margin-top: 20px;
+  padding-bottom: 200px;
+}
+
+.main__actors {
+  background-color: #fff;
+  margin: -40px auto 100px;
+  width: 80vw;
+  height: 300px;
+  min-width: 680px;
+  max-width: 800px;
+}
+
+.actors__image {
+  width: 200px;
+  height: 300px;
+  margin: -40px 80px 0 -40px;
+  float: left;
+}
+
+.actors__text {
+  margin: 0 auto 0;
+  padding: 40px 80px 40px;
+}
+
+.actors__link {
+  display: inline-block;
+  background-color: #000;
+  color: #fff;
+  padding: 20px 40px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: LivvicBlack, sans-serif;
+}
+
+.actors__link:hover {
+  background-color: #DDA458;
+}
+
+.main__projects {
+  padding: 0 160px 0;
+}
+
+.projects__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.projects__link {
+  background-color: #fff;
+  color: #000;
+  padding: 20px 40px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: LivvicBlack, sans-serif;
+}
+
+.projects__link:hover {
+  background-color: #DDA458;
+  color: #fff;
+}
+
+.projects__list {
+  width: 100vw;
+  height: 600px;
+  margin: 40px 0 0 -160px;
+  padding-bottom: 20px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+
+.projects__list li {
+  display: inline-block;
+  margin-left: 40px;
+  white-space: normal;
+  vertical-align: top;
+}
+
+.projects__list li:first-child {
+  margin-left: 160px;
+}
+
+.projects__project div {
+  display: grid;
+  width: 400px;
+  height: 400px;
+}
+
+.main__articles {
+  background-color: #000;
+  color: #fff;
+  padding: 80px 160px 100px;
+}
+
+.articles__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.articles__link {
+  background-color: #fff;
+  color: #000;
+  padding: 20px 40px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: LivvicBlack, sans-serif;
+}
+
+.articles__link:hover {
+  background-color: #DDA458;
+  color: #fff;
+}
+
+.articles__list {
+  width: 100vw;
+  margin: 40px 0 0 -160px;
+  padding-bottom: 40px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+
+.articles__list .main__item {
+  display: inline-block;
+  width: 400px;
+  height: 400px;
+  margin-left: 40px;
+  white-space: normal;
+  vertical-align: top;
+  background-size: cover;
+}
+
+.articles__list .main__item:first-of-type {
+  margin-left: 80px;
+}
+
+.articles__list .main__item:last-of-type {
+  margin-right: 80px;
+}
+
+.main__item .main__articleContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 20px;
+  margin-top: 160px;
+  height: 50%;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.main__item:hover .main__articleContainer {
+  height: 100%;
+  margin-top: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 59.9%);
+}
+
+.main__item .article__more {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  opacity: 0;
+  margin-bottom: 40px;
+}
+
+.main__item:hover .article__more {
+  opacity: 1;
+}
+
+.main__articles .article__thumb img {
+  z-index: auto;
+  width: 400px;
+  height: 400px;
+}
+
+.main__item:hover .article__title {
+  padding-bottom: 80px;
+}
+
+.article__excerpt {
+  display: none;
+}
+
+.article__link {
+  font-family: LivvicBold, sans-serif;
+  color: #fff;
+  text-decoration: none;
+}
+
+.articles__list {
+  scrollbar-width: thin;
+  scrollbar-color: #ffffff #000000;
+}
+
+.articles__list::-webkit-scrollbar {
+  height: 7px;
+}
+
+.articles__list::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+.articles__list::-webkit-scrollbar-thumb {
+  background-color: #ffffff;
+}
+
+.main__contact {
+  background-image: url("../../src/images/bg_2.jpg");
+  background-size: cover;
+  height: 1000px;
+  padding: 80px 0 0 80px;
+}
+
+.contact__container {
+  background-color: #fff;
+  padding: 40px;
+  width: 600px;
+}
+
+.contact__title {
+  line-height: 1.2;
+}
+
+.contact__label {
+  display: block;
+  margin-top: 40px;
+  font-family: LivvicBold, sans-serif;
+}
+
+.contact__input {
+  font-family: Livvic, sans-serif;
+  display: block;
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  font-size: 16px;
+  padding-left: 8px;
+}
+
+.contact__input:focus {
+  border: 1px solid #000;
+  outline: 1px solid #000;
+}
+
+textarea.contact__input {
+  resize: vertical;
+  padding-top: 8px;
+  min-height: 120px;
+}
+
+.contact__submit {
+  margin-top: 40px;
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+  padding: 20px 40px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: LivvicBlack, sans-serif;
+  border: none;
+}
+
+.contact__submit:hover {
+  background-color: #DDA458;
+}
+
+.main__socials {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding-top: 80px;
+}
+
+.socials__item {
+  display: inline-block;
+  margin: 20px 20px 160px;
+}
+
+.socials__item img {
+  width: 80px;
+  height: 80px;
+}

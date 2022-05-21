@@ -1,0 +1,30 @@
+.projects .main__presentation {
+    background-image: url("../../src/images/bg_3.jpg");
+    background-size: cover;
+    height: 100vh;
+}
+.projects .main__presentation .presentation__title {
+    margin: 30vh auto 0;
+    padding-top: 10vh;
+    border-top: 2px solid #DDA458;
+    width: 75vw;
+}
+
+.projects .main__title {
+    color: #000;
+    padding-top: 80px;
+    margin-bottom: 40px;
+}
+
+.projects .projects__item {
+    width: 100vw;
+    display: flex;
+    margin-bottom: 80px;
+}
+.projects .projects__item:nth-child(2n) {
+    justify-content: flex-end;
+}
+.projects .projects__project {
+    background-color: #fff;
+    width: 80vw;
+}

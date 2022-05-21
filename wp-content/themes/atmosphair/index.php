@@ -59,7 +59,7 @@
             <?php endif; ?>
             <li class="projects__item">
                 <div class="projects__project">
-                    <img class="project__icon" src="<?= get_template_directory_uri() . "/images/r_arrow.svg"; ?>" alt="->">
+                    <img class="project__icon" src="<?= get_template_directory_uri() . "/src/images/r_arrow.svg"; ?>" alt="->">
                     <a class="project__link" href="<?= site_url('/projets/') ?>"><?= __('Voir tous nos projets','atmosphair') ?></a>
                 </div>
             </li>
@@ -76,9 +76,11 @@
             endwhile; else:  ?>
             <?php endif; ?>
             <li class="main__item" style="background-image: url(<?= get_template_directory_uri(); ?>/src/images/more_articles.jpg)">
-                <a class="article__link" href="<?= site_url('publications') ?>">
-                    <h4 class="article__title"><?= __('Voir toutes les publications nous concernant','atmosphair') ?></h4>
-                </a>
+                <div>
+                    <a class="article__link" href="<?= site_url('publications') ?>">
+                        <h4 class="article__title"><?= __('Voir toutes les publications nous concernant','atmosphair') ?></h4>
+                    </a>
+                </div>
             </li>
         </ul>
     </section>

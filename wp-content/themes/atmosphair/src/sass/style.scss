@@ -1,28 +1,30 @@
 @import "_reset.scss";
-@import "header.scss";
-@import "footer.scss";
-@import "about.scss";
-@import "projects.scss";
 
-/* ---------- CSS LOAD FONT ---------- */
 @font-face {
     font-family: LivvicBlack;
-    src: url("../fonts/Livvic-Black.ttf");
+    src: url("../../src/fonts/Livvic-Black.ttf");
     font-display: auto;
 }
 @font-face {
     font-family: LivvicBold;
-    src: url("../fonts/Livvic-Bold.ttf");
+    src: url("../../src/fonts/Livvic-Bold.ttf");
     font-display: auto;
 }
 @font-face {
     font-family: Livvic;
-    src: url("../fonts/Livvic-Regular.ttf");
+    src: url("../../src/fonts/Livvic-Regular.ttf");
     font-display: auto;
 }
 
+$border-space: 160px;
 
-/* ---------- CSS ---------- */
+@import "header.scss";
+@import "footer.scss";
+@import "about.scss";
+@import "projects.scss";
+@import "publications.scss";
+
+
 body {
     font-family: Livvic, sans-serif;
     background-color: #ededed;
@@ -43,7 +45,7 @@ em {
 }
 
 .main__header {
-    background-image: url("../images/bg_1.jpg");
+    background-image: url("../../src/images/bg_1.jpg");
     background-size: cover;
     height: 100vh;
 }
@@ -57,7 +59,7 @@ em {
 .main__stats, .main__presentation {
     background-color: #000;
     color: #fff;
-    padding: 150px 80px 0;
+    padding: 150px $border-space 0;
 }
 .main__stats {
     display: flex;
@@ -113,9 +115,10 @@ em {
 }
 .actors__text {
     margin: 0 auto 0;
-    padding: 40px 80px 0;
+    padding: 40px 80px 40px;
 }
 .actors__link {
+    display: inline-block;
     background-color: #000;
     color: #fff;
     padding: 20px 40px;
@@ -129,7 +132,7 @@ em {
 
 
 .main__projects {
-    padding: 0 80px 0;
+    padding: 0 $border-space 0;
 }
 .projects__container {
     display: flex;
@@ -150,7 +153,8 @@ em {
 }
 .projects__list {
     width: 100vw;
-    margin: 40px 0 0 -80px;
+    height: 600px;
+    margin: 40px 0 0 -160px;
     padding-bottom: 20px;
     overflow-x: auto;
     overflow-y: hidden;
@@ -158,17 +162,25 @@ em {
 }
 .projects__list li {
     display: inline-block;
-    width: 400px;
     margin-left: 40px;
     white-space: normal;
     vertical-align: top;
+}
+.projects__list li:first-child {
+    margin-left: 160px;
+}
+
+.projects__project div{
+    display: grid;
+    width: 400px;
+    height: 400px;
 }
 
 
 .main__articles {
     background-color: #000;
     color: #fff;
-    padding: 80px 80px 100px;
+    padding: 80px $border-space 100px;
 }
 .articles__container {
     display: flex;
@@ -189,8 +201,8 @@ em {
 }
 .articles__list {
     width: 100vw;
-    margin: 40px 0 0 -80px;
-    padding-bottom: 20px;
+    margin: 40px 0 0 -160px;
+    padding-bottom: 40px;
     overflow-x: auto;
     overflow-y: hidden;
     white-space: nowrap;
@@ -210,18 +222,65 @@ em {
 .articles__list .main__item:last-of-type {
     margin-right: 80px;
 }
+.main__item .main__articleContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px;
+    margin-top: 160px;
+    height: 50%;
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+}
+.main__item:hover .main__articleContainer {
+    height: 100%;
+    margin-top: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 59.9%);
+}
+.main__item .article__more {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    opacity: 0;
+    margin-bottom: 40px;
+}
+.main__item:hover .article__more {
+    opacity: 1;
+}
 .main__articles .article__thumb img {
     z-index: auto;
     width: 400px;
     height: 400px;
 }
+.main__item:hover .article__title {
+    padding-bottom: 80px;
+}
 .article__excerpt {
     display: none;
+}
+.article__link {
+    font-family: LivvicBold, sans-serif;
+    color: #fff;
+    text-decoration: none;
+}
+
+.articles__list {
+    scrollbar-width: thin;
+    scrollbar-color: #ffffff #000000;
+}
+.articles__list::-webkit-scrollbar {
+    height: 7px;
+}
+.articles__list::-webkit-scrollbar-track {
+    background: #000000;
+}
+.articles__list::-webkit-scrollbar-thumb {
+    background-color: #ffffff;
 }
 
 
 .main__contact {
-    background-image: url("../images/bg_2.jpg");
+    background-image: url("../../src/images/bg_2.jpg");
     background-size: cover;
     height: 1000px;
     padding: 80px 0 0 80px;
