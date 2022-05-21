@@ -28,3 +28,42 @@
     background-color: #fff;
     width: 80vw;
 }
+
+.projects .projects__project div {
+    display: flex;
+}
+.projects .project__name {
+    display: flex;
+    align-items: center;
+    order: 1;
+    height: 100px;
+    margin: 40px auto 20px;
+    width: 400px;
+}
+.projects .project__title {
+    font-family: LivvicBlack, sans-serif;
+    font-size: 45px;
+}
+.projects .project__icon {
+    height: 100px;
+    margin-left: 12px;
+}
+.projects .project__fig {
+    order: 0;
+}
+.projects .projects__item:nth-child(2n) .project__fig {
+    order: 4;
+}
+.projects .project__fig img {
+    height: 100%;
+    width: 400px;
+}
+.projects .project__description {
+    order: 2;
+    display: inline-block;
+}
+.projects .project__link {
+    order: 3;
+    display: inline-block;
+
+}
