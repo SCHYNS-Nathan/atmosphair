@@ -30,12 +30,16 @@
 }
 
 .projects .projects__project div {
-    display: flex;
+    display: grid;
+    grid-template-areas:
+        "fig name"
+        "fig text"
+        "fig link";
 }
 .projects .project__name {
+    grid-area: name;
     display: flex;
     align-items: center;
-    order: 1;
     height: 100px;
     margin: 40px auto 20px;
     width: 400px;
@@ -49,21 +53,18 @@
     margin-left: 12px;
 }
 .projects .project__fig {
-    order: 0;
+    grid-area: fig;
 }
 .projects .projects__item:nth-child(2n) .project__fig {
-    order: 4;
 }
 .projects .project__fig img {
     height: 100%;
     width: 400px;
 }
 .projects .project__description {
-    order: 2;
-    display: inline-block;
+    grid-area: text;
 }
 .projects .project__link {
-    order: 3;
-    display: inline-block;
+    grid-area: link;
 
 }

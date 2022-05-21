@@ -156,6 +156,10 @@ em {
     overflow-x: auto;
     overflow-y: hidden;
     white-space: nowrap;
+    display: grid;
+    grid-template-areas:
+        "a b d e"
+        "a c d f";
 }
 .projects__list li {
     display: inline-block;
@@ -165,12 +169,27 @@ em {
 }
 .projects__list li:first-child {
     margin-left: 160px;
+    grid-area: a;
+}
+.projects__list li:nth-child(2) {
+    grid-area: b;
+}
+.projects__list li:nth-child(3) {
+    grid-area: c;
+}
+.projects__list li:nth-child(4) {
+    grid-area: d;
+}
+.projects__list li:nth-child(5) {
+    grid-area: e;
+}
+.projects__list li:nth-child(6) {
+    grid-area: f;
 }
 
 .projects__project div{
     display: grid;
     width: 400px;
-    height: 400px;
 }
 
 

@@ -333,6 +333,8 @@ em {
   overflow-x: auto;
   overflow-y: hidden;
   white-space: nowrap;
+  display: grid;
+  grid-template-areas: "a b d e" "a c d f";
 }
 
 .projects__list li {
@@ -344,12 +346,32 @@ em {
 
 .projects__list li:first-child {
   margin-left: 160px;
+  grid-area: a;
+}
+
+.projects__list li:nth-child(2) {
+  grid-area: b;
+}
+
+.projects__list li:nth-child(3) {
+  grid-area: c;
+}
+
+.projects__list li:nth-child(4) {
+  grid-area: d;
+}
+
+.projects__list li:nth-child(5) {
+  grid-area: e;
+}
+
+.projects__list li:nth-child(6) {
+  grid-area: f;
 }
 
 .projects__project div {
   display: grid;
   width: 400px;
-  height: 400px;
 }
 
 .main__articles {
@@ -741,13 +763,14 @@ textarea.contact__input {
 }
 
 .projects .projects__project div {
-  display: flex;
+  display: grid;
+  grid-template-areas: "fig name" "fig text" "fig link";
 }
 
 .projects .project__name {
+  grid-area: name;
   display: flex;
   align-items: center;
-  order: 1;
   height: 100px;
   margin: 40px auto 20px;
   width: 400px;
@@ -764,11 +787,7 @@ textarea.contact__input {
 }
 
 .projects .project__fig {
-  order: 0;
-}
-
-.projects .projects__item:nth-child(2n) .project__fig {
-  order: 4;
+  grid-area: fig;
 }
 
 .projects .project__fig img {
@@ -777,13 +796,11 @@ textarea.contact__input {
 }
 
 .projects .project__description {
-  order: 2;
-  display: inline-block;
+  grid-area: text;
 }
 
 .projects .project__link {
-  order: 3;
-  display: inline-block;
+  grid-area: link;
 }
 
 .publications .main__container {
