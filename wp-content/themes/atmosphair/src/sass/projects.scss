@@ -36,13 +36,13 @@
         "fig text"
         "fig link";
 }
-.projects .project__name {
+.projects div div.project__name {
     grid-area: name;
     display: flex;
     align-items: center;
     height: 100px;
-    margin: 40px auto 20px;
-    width: 400px;
+    margin: 40px 80px 20px;
+    width: 200px;
 }
 .projects .project__title {
     font-family: LivvicBlack, sans-serif;
@@ -63,8 +63,9 @@
 }
 .projects .project__description {
     grid-area: text;
+    margin-left: 80px;
 }
 .projects .project__link {
     grid-area: link;
-
+    margin-left: 80px;
 }

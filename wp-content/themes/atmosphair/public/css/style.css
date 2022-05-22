@@ -52,6 +52,10 @@ table {
   border-spacing: 0;
 }
 
+body {
+  color: #0048ff;
+}
+
 @font-face {
   font-family: LivvicBlack;
   src: url("../../src/fonts/Livvic-Black.ttf");
@@ -767,13 +771,13 @@ textarea.contact__input {
   grid-template-areas: "fig name" "fig text" "fig link";
 }
 
-.projects .project__name {
+.projects div div.project__name {
   grid-area: name;
   display: flex;
   align-items: center;
   height: 100px;
-  margin: 40px auto 20px;
-  width: 400px;
+  margin: 40px 80px 20px;
+  width: 200px;
 }
 
 .projects .project__title {
@@ -797,10 +801,12 @@ textarea.contact__input {
 
 .projects .project__description {
   grid-area: text;
+  margin-left: 80px;
 }
 
 .projects .project__link {
   grid-area: link;
+  margin-left: 80px;
 }
 
 .publications .main__container {
