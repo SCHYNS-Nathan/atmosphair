@@ -26,7 +26,8 @@
 }
 .projects .projects__project {
     background-color: #fff;
-    width: 80vw;
+    width: 1200px;
+    height: 350px;
 }
 
 .projects .projects__project div {
@@ -54,18 +55,30 @@
 }
 .projects .project__fig {
     grid-area: fig;
+    width: 350px;
+    height: 350px;
 }
+
+
 .projects .projects__item:nth-child(2n) .project__fig {
+
 }
 .projects .project__fig img {
     height: 100%;
-    width: 400px;
+    width: 100%;
 }
 .projects .project__description {
     grid-area: text;
     margin-left: 80px;
+    width: 600px;
 }
 .projects .project__link {
     grid-area: link;
-    margin-left: 80px;
+    margin: 40px 0 0 80px;
+    background-color: #000;
+    color: #fff;
+    padding: 20px 40px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: LivvicBlack, sans-serif;
 }
