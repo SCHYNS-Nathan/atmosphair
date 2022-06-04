@@ -1,0 +1,134 @@
+.projects__list {
+	width: 100vw;
+	height: 600px;
+	margin: 40px 0 0 -160px;
+	padding-bottom: 20px;
+	overflow-x: auto;
+	overflow-y: hidden;
+	white-space: nowrap;
+	display: grid;
+	grid-gap: 40px;
+	grid-template-areas:
+        "a b d e"
+        "a c d f";
+}
+
+.projects__list li {
+	display: inline-block;
+	white-space: normal;
+	vertical-align: top;
+}
+.projects__list li:first-child {
+	margin-left: 160px;
+	grid-area: a;
+}
+.projects__list li:nth-child(2) {
+	grid-area: b;
+}
+.projects__list li:nth-child(3) {
+	grid-area: c;
+}
+.projects__list li:nth-child(4) {
+	grid-area: d;
+}
+.projects__list li:nth-child(5) {
+	grid-area: e;
+	margin-right: 160px;
+}
+.projects__list li:nth-child(6) {
+	grid-area: f;
+}
+.layout .projects__item:nth-child(3n+2) {
+	height: 40px;
+}
+
+.projects__item .projects__project {
+	box-shadow: 0 5px 9px 3px rgba(0, 0, 0, 0.25);
+	width: 440px;
+}
+.projects__item .project__container {
+	display: grid;
+	width: 440px;
+	height: 200px;
+	background-color: #fff;
+}
+
+.layout .projects__item:nth-child(3n+1) .project__container{
+	height: 440px;
+}
+.layout .projects__item:nth-child(3n+1) .project__name .project__icon {
+	width: 150px;
+	height: 150px;
+}
+
+.layout .projects__item:nth-child(3n+2) .project__container {
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: space-between;
+
+}
+.layout .projects__item:nth-child(3n+2) .project__name {
+	flex-direction: column-reverse;
+	width: 220px;
+}
+.layout .projects__item:nth-child(3n+2) .project__fig {
+	width: 220px;
+}
+
+.layout .projects__item:nth-child(3n+3) .project__container {
+	display: flex;
+	justify-content: space-between;
+}
+.layout .projects__item:nth-child(3n+3) .project__name {
+	flex-direction: column-reverse;
+	width: 220px;
+
+}
+.layout .projects__item:nth-child(3n+3) .project__fig {
+	width: 220px;
+}
+
+
+.layout .projects__item .project__name {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	order: 2;
+}
+.layout .project__name .project__title {
+	font-size: 50px;
+	font-family: LivvicBlack, sans-serif;
+}
+.layout .project__name .project__icon {
+	width: 100px;
+	height: 100px;
+}
+
+
+.layout .project__fig {
+	width: 100%;
+	height: 200px;
+}
+.layout .projects__item:nth-child(3n+1) .project__fig {
+	order: 1;
+}
+
+
+.layout .project__fig img{
+	width: 100%;
+	height: 100%;
+}
+.layout .project__description, .project__link {
+	order: 3;
+	display: none;
+}
+.layout .projects__item:last-child .project__link {
+	display: flex;
+	font-family: LivvicBold, sans-serif;
+	font-size: 30px;
+	justify-content: center;
+	align-items: center;
+	width: 220px;
+	text-decoration: none;
+	color: #000;
+}

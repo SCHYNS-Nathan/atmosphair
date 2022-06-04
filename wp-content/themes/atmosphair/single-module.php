@@ -1,5 +1,3 @@
-<?php /* Template Name: Template page Projet */ ?>
-
 <?= get_header(); ?>
     <main class="main" itemscope itemtype="https://schema.org/Project">
         <a class="main__return" href="<?= site_url('projets/'); ?>" id="top"><?= __('Retour à la page projets','atmosphair') ?></a>

@@ -16,10 +16,10 @@ require_once(__DIR__ . '/Forms/Validators/AcceptedValidator.php');
 
 add_action('init', 'atmos_boot_theme', 1);
 
+
 function atmos_boot_theme()
 {
     load_theme_textdomain('atmosphair', __DIR__ . '/locales');
-
     if (! session_id()) {
         session_start();
     }

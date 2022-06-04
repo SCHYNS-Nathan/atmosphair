@@ -1,0 +1,46 @@
+
+.actors__link:hover {
+	background-color: #DDA458;
+}
+.projects__link:hover {
+	background-color: #DDA458;
+	color: #fff;
+}
+.articles__link:hover {
+	background-color: #DDA458;
+	color: #fff;
+}
+.contact__input:focus {
+	border: 1px solid #000;
+	outline: 1px solid #000;
+}
+.contact__submit:hover {
+	background-color: #DDA458;
+}
+
+
+.main__about .actor__link:hover {
+	background-color: #DDA458;
+	color: #fff;
+}
+
+
+.header__item:hover {
+	text-decoration: underline;
+	color: #fff;
+}
+.footer__link:hover {
+	text-decoration: underline;
+}
+
+.main__item:hover .main__articleContainer {
+	height: 100%;
+	margin-top: 0;
+	background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 59.9%);
+}
+.main__item:hover .article__title {
+	padding-bottom: 80px;
+}
+.main__item:hover .article__more {
+	opacity: 1;
+}

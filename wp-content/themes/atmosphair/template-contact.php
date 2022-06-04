@@ -1,6 +1,6 @@
 <?php /* Template Name: Template page Contact */ ?>
 <?php get_header(); ?>
-    <main class="main">
+    <main class="mainContact">
         <h2 class="main__title"><?= __('Une question ? Contactez-nous !','atmosphair') ?></h2>
         <section class="main__contact">
             <h3 class="contact__title"><?= __('Remplissez le formulaire ou utilisez l’un de nos nombreux moyens de contact !','atmosphair') ?></h3>
@@ -25,26 +25,31 @@
                 <a class="infos__link" href="https://www.hepl.be/fr/master-ingenieur-industriel/electronique-systemes-embarques"><?= __('Visite la page d’inscription de la HEPL','atmosphair') ?></a>
             </div>
             <form class="contact__form">
-                <label class="contact__label" for="name">Votre nom</label>
-                <input class="contact__input" id="name" name="name">
-
-                <label class="contact__label" for="firstname">Votre prénom</label>
-                <input class="contact__input" id="firstname" name="firstname">
-
-                <label class="contact__label" for="mail">Votre adresse mail</label>
-                <input class="contact__input" id="mail" name="mail">
-
-                <label class="contact__label" for="subject">Sujet</label>
-                <select class="contact__select" id="subject" name="subject">
-                    <option value="issep">Question à propos des résultats</option>
-                    <option value="hepl">Question à propos de la section électronique et systèmes embarqués</option>
-                    <option value="issep">Achat pour le secteur privé</option>
-                    <option value="issep">Achat pour le secteur public</option>
-                </select>
-
-                <label class="contact__label" for="message">Votre message</label>
-                <input class="contact__input" id="message" name="message">
-
+                <div>
+                    <label class="contact__label" for="name"><?= __('Votre nom','atmosphair'); ?></label>
+                    <input class="contact__input" id="name" name="name" placeholder="<?= __('Nom','atmosphair'); ?>" required>
+                </div>
+                <div>
+                    <label class="contact__label" for="firstname"><?= __('Votre prénom','atmosphair'); ?></label>
+                    <input class="contact__input" id="firstname" name="firstname" placeholder="<?= __('Prénom','atmosphair'); ?>" required>
+                </div>
+                <div>
+                    <label class="contact__label" for="mail"><?= __('Votre adresse mail','atmosphair'); ?></label>
+                    <input class="contact__input" id="mail" name="mail" placeholder="<?= __('nom.prénom@email.com','atmosphair'); ?>" required>
+                </div>
+                <div>
+                    <label class="contact__label" for="subject"><?= __('Sujet','atmosphair'); ?></label>
+                    <select class="contact__select" id="subject" name="subject">
+                        <option value="issep"><?= __('Question à propos des résultats','atmosphair'); ?></option>
+                        <option value="hepl"><?= __('Question à propos de la section électronique et systèmes embarqués','atmosphair'); ?></option>
+                        <option value="issep"><?= __('Achat pour le secteur privé','atmosphair'); ?></option>
+                        <option value="issep"><?= __('Achat pour le secteur public','atmosphair'); ?></option>
+                    </select>
+                </div>
+                <div>
+                    <label class="contact__label" for="message"><?= __('Votre message','atmosphair'); ?></label>
+                    <textarea class="contact__input" id="message" name="message" placeholder="<?= __('Écrivez votre message ici','atmosphair'); ?>" required></textarea>
+                </div>
                 <input class="contact__submit" type="submit">
             </form>
         </section>

@@ -24,6 +24,15 @@
 .projects .projects__item:nth-child(2n) {
     justify-content: flex-end;
 }
+.projects .projects__item:nth-child(2n) .project__container {
+    grid-template-areas:
+        "name fig"
+        "text fig"
+        "link fig";
+}
+.projects .projects__item:nth-child(2n) .project__fig {
+    margin-left: 330px;
+}
 .projects .projects__project {
     background-color: #fff;
     width: 1200px;
@@ -60,9 +69,6 @@
 }
 
 
-.projects .projects__item:nth-child(2n) .project__fig {
-
-}
 .projects .project__fig img {
     height: 100%;
     width: 100%;
@@ -70,15 +76,18 @@
 .projects .project__description {
     grid-area: text;
     margin-left: 80px;
-    width: 600px;
 }
 .projects .project__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     grid-area: link;
-    margin: 40px 0 0 80px;
+    margin: 40px 0 -40px 80px;
     background-color: #000;
     color: #fff;
     padding: 20px 40px;
     text-decoration: none;
     text-transform: uppercase;
     font-family: LivvicBlack, sans-serif;
+    width: 360px;
 }

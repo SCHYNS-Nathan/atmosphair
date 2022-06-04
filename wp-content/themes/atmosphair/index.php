@@ -59,8 +59,10 @@
             <?php endif; ?>
             <li class="projects__item">
                 <div class="projects__project">
-                    <img class="project__icon" src="<?= get_template_directory_uri() . "/src/images/r_arrow.svg"; ?>" alt="->">
-                    <a class="project__link" href="<?= site_url('/projets/') ?>"><?= __('Voir tous nos projets','atmosphair') ?></a>
+                    <div class="project__container">
+                        <img class="project__icon" src="<?= get_template_directory_uri() . "/src/images/r_arrow.svg"; ?>" alt="->">
+                        <a class="project__link" href="<?= site_url('/projets/') ?>"><?= __('Voir tous nos projets','atmosphair') ?></a>
+                    </div>
                 </div>
             </li>
         </ul>
@@ -78,7 +80,7 @@
             <li class="main__item" style="background-image: url(<?= get_template_directory_uri(); ?>/src/images/more_articles.jpg)">
                 <div>
                     <a class="article__link" href="<?= site_url('publications') ?>">
-                        <h4 class="article__title"><?= __('Voir toutes les publications nous concernant','atmosphair') ?></h4>
+                        <?= __('Voir toutes les publications nous concernant','atmosphair') ?>
                     </a>
                 </div>
             </li>
@@ -88,25 +90,25 @@
         <div class="contact__container">
             <h3 class="contact__title"><?= __('Une question ?','atmosphair') . "<br>" .  __('Contactez-nous !','atmosphair'); ?></h3>
             <form class="contact__form">
-                <label class="contact__label" for="name">Votre nom</label>
-                <input class="contact__input" id="name" name="name" placeholder="Nom" required>
+                <label class="contact__label" for="name"><?= __('Votre nom','atmosphair'); ?></label>
+                <input class="contact__input" id="name" name="name" placeholder="<?= __('Nom','atmosphair'); ?>" required>
 
-                <label class="contact__label" for="firstname">Votre prénom</label>
-                <input class="contact__input" id="firstname" name="firstname" placeholder="Prénom" required>
+                <label class="contact__label" for="firstname"><?= __('Votre prénom','atmosphair'); ?></label>
+                <input class="contact__input" id="firstname" name="firstname" placeholder="<?= __('Prénom','atmosphair'); ?>" required>
 
-                <label class="contact__label" for="mail">Votre adresse mail</label>
-                <input class="contact__input" id="mail" name="mail" placeholder="nom.prénom@email.com" required>
+                <label class="contact__label" for="mail"><?= __('Votre adresse mail','atmosphair'); ?></label>
+                <input class="contact__input" id="mail" name="mail" placeholder="<?= __('nom.prénom@email.com','atmosphair'); ?>" required>
 
-                <label class="contact__label" for="subject">Sujet</label>
+                <label class="contact__label" for="subject"><?= __('Sujet','atmosphair'); ?></label>
                 <select class="contact__select" id="subject" name="subject">
-                    <option value="issep"><?= __('Question à propos des résultats','atmosphair') ?></option>
-                    <option value="hepl">Question à propos de la section électronique et systèmes embarqués</option>
-                    <option value="issep">Achat pour le secteur privé</option>
-                    <option value="issep">Achat pour le secteur public</option>
+                    <option value="issep"><?= __('Question à propos des résultats','atmosphair'); ?></option>
+                    <option value="hepl"><?= __('Question à propos de la section électronique et systèmes embarqués','atmosphair'); ?></option>
+                    <option value="issep"><?= __('Achat pour le secteur privé','atmosphair'); ?></option>
+                    <option value="issep"><?= __('Achat pour le secteur public','atmosphair'); ?></option>
                 </select>
 
-                <label class="contact__label" for="message">Votre message</label>
-                <textarea class="contact__input" id="message" name="message" placeholder="Écrivez votre message ici" required></textarea>
+                <label class="contact__label" for="message"><?= __('Votre message','atmosphair'); ?></label>
+                <textarea class="contact__input" id="message" name="message" placeholder="<?= __('Écrivez votre message ici','atmosphair'); ?>" required></textarea>
 
                 <input class="contact__submit" type="submit">
             </form>

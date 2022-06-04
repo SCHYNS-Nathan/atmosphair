@@ -40,6 +40,11 @@ em {
     left: -10000px;
     font-size: 0;
 }
+::selection {
+    background-color: #DDA458;
+    color: #fff;
+}
+
 
 .main__header {
     background-image: url("../../src/images/bg_1.jpg");
@@ -51,8 +56,6 @@ em {
     color: #ededed;
     padding: 70vh 80px 0;
 }
-
-
 .main__stats, .main__presentation {
     background-color: #000;
     color: #fff;
@@ -79,7 +82,6 @@ em {
 .stats__text {
     margin-top: 20px;
 }
-
 .main__presentation {
     text-align: center;
 }
@@ -96,6 +98,7 @@ em {
     padding-bottom: 200px;
 }
 
+
 .main__actors {
     background-color: #fff;
     margin: -40px auto 100px;
@@ -111,7 +114,7 @@ em {
     float: left;
 }
 .actors__text {
-    margin: 0 auto 0;
+    margin: 0 auto 28px;
     padding: 40px 80px 40px;
 }
 .actors__link {
@@ -122,9 +125,6 @@ em {
     text-decoration: none;
     text-transform: uppercase;
     font-family: LivvicBlack, sans-serif;
-}
-.actors__link:hover {
-    background-color: #DDA458;
 }
 
 
@@ -143,54 +143,9 @@ em {
     text-decoration: none;
     text-transform: uppercase;
     font-family: LivvicBlack, sans-serif;
+    text-align: center;
 }
-.projects__link:hover {
-    background-color: #DDA458;
-    color: #fff;
-}
-.projects__list {
-    width: 100vw;
-    height: 600px;
-    margin: 40px 0 0 -160px;
-    padding-bottom: 20px;
-    overflow-x: auto;
-    overflow-y: hidden;
-    white-space: nowrap;
-    display: grid;
-    grid-template-areas:
-        "a b d e"
-        "a c d f";
-}
-.projects__list li {
-    display: inline-block;
-    margin-left: 40px;
-    white-space: normal;
-    vertical-align: top;
-}
-.projects__list li:first-child {
-    margin-left: 160px;
-    grid-area: a;
-}
-.projects__list li:nth-child(2) {
-    grid-area: b;
-}
-.projects__list li:nth-child(3) {
-    grid-area: c;
-}
-.projects__list li:nth-child(4) {
-    grid-area: d;
-}
-.projects__list li:nth-child(5) {
-    grid-area: e;
-}
-.projects__list li:nth-child(6) {
-    grid-area: f;
-}
-
-.projects__project div{
-    display: grid;
-    width: 400px;
-}
+@import "projects-slider.scss";
 
 
 .main__articles {
@@ -210,10 +165,7 @@ em {
     text-decoration: none;
     text-transform: uppercase;
     font-family: LivvicBlack, sans-serif;
-}
-.articles__link:hover {
-    background-color: #DDA458;
-    color: #fff;
+    text-align: center;
 }
 .articles__list {
     width: 100vw;
@@ -248,11 +200,6 @@ em {
     background: rgb(0,0,0);
     background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
 }
-.main__item:hover .main__articleContainer {
-    height: 100%;
-    margin-top: 0;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 59.9%);
-}
 .main__item .article__more {
     display: flex;
     justify-content: space-between;
@@ -260,16 +207,10 @@ em {
     opacity: 0;
     margin-bottom: 40px;
 }
-.main__item:hover .article__more {
-    opacity: 1;
-}
 .main__articles .article__thumb img {
     z-index: auto;
     width: 400px;
     height: 400px;
-}
-.main__item:hover .article__title {
-    padding-bottom: 80px;
 }
 .article__excerpt {
     display: none;
@@ -279,7 +220,6 @@ em {
     color: #fff;
     text-decoration: none;
 }
-
 .articles__list {
     scrollbar-width: thin;
     scrollbar-color: #ffffff #000000;
@@ -292,6 +232,13 @@ em {
 }
 .articles__list::-webkit-scrollbar-thumb {
     background-color: #ffffff;
+}
+.layout .main__item:last-child .article__link {
+    width: 400px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
 }
 
 
@@ -323,10 +270,6 @@ em {
     font-size: 16px;
     padding-left: 8px;
 }
-.contact__input:focus {
-    border: 1px solid #000;
-    outline: 1px solid #000;
-}
 textarea.contact__input {
     resize: vertical;
     padding-top: 8px;
@@ -342,9 +285,6 @@ textarea.contact__input {
     text-transform: uppercase;
     font-family: LivvicBlack, sans-serif;
     border: none;
-}
-.contact__submit:hover {
-    background-color: #DDA458;
 }
 
 
@@ -362,6 +302,7 @@ textarea.contact__input {
     width: 80px;
     height: 80px;
 }
+
 
 @import "about.scss";
 @import "projects.scss";
