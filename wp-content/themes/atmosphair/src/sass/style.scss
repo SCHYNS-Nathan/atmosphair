@@ -81,6 +81,7 @@ em {
 }
 .stats__text {
     margin-top: 20px;
+    max-width: 400px;
 }
 .main__presentation {
     text-align: center;
@@ -185,10 +186,10 @@ em {
     background-size: cover;
 }
 .articles__list .main__item:first-of-type {
-    margin-left: 80px;
+    margin-left: 160px;
 }
 .articles__list .main__item:last-of-type {
-    margin-right: 80px;
+    margin-right: 160px;
 }
 .main__item .main__articleContainer {
     display: flex;
@@ -220,17 +221,17 @@ em {
     color: #fff;
     text-decoration: none;
 }
-.articles__list {
+.articles__list, .projects__list {
     scrollbar-width: thin;
     scrollbar-color: #ffffff #000000;
 }
-.articles__list::-webkit-scrollbar {
+.articles__list::-webkit-scrollbar, .projects__list::-webkit-scrollbar {
     height: 7px;
 }
-.articles__list::-webkit-scrollbar-track {
+.articles__list::-webkit-scrollbar-track, .projects__list::-webkit-scrollbar-track {
     background: #000000;
 }
-.articles__list::-webkit-scrollbar-thumb {
+.articles__list::-webkit-scrollbar-thumb, .projects__list::-webkit-scrollbar-thumb {
     background-color: #ffffff;
 }
 .layout .main__item:last-child .article__link {
@@ -246,7 +247,7 @@ em {
     background-image: url("../../src/images/bg_2.jpg");
     background-size: cover;
     height: 1000px;
-    padding: 80px 0 0 80px;
+    padding: 80px 0 0 160px;
 }
 .contact__container {
     background-color: #fff;
@@ -274,6 +275,7 @@ textarea.contact__input {
     resize: vertical;
     padding-top: 8px;
     min-height: 120px;
+    max-height: 180px;
 }
 .contact__submit {
     margin-top: 40px;
@@ -309,3 +311,5 @@ textarea.contact__input {
 @import "single-project.scss";
 @import "publications.scss";
 @import "contact.scss";
+
+@import "1400px";
