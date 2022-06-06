@@ -1,12 +1,7 @@
-
 .actors__link:hover {
 	background-color: #DDA458;
 }
-.projects__link:hover {
-	background-color: #DDA458;
-	color: #fff;
-}
-.articles__link:hover {
+.projects__link:hover, .articles__link:hover, .main__about .actor__link:hover, .projects .project__link:hover {
 	background-color: #DDA458;
 	color: #fff;
 }
@@ -19,12 +14,6 @@
 }
 
 
-.main__about .actor__link:hover {
-	background-color: #DDA458;
-	color: #fff;
-}
-
-
 .header__item:hover {
 	text-decoration: underline;
 	color: #fff;
@@ -33,14 +22,14 @@
 	text-decoration: underline;
 }
 
-.main__item:hover .main__articleContainer {
+.layout .main__item:hover .main__articleContainer {
 	height: 100%;
 	margin-top: 0;
 	background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 59.9%);
 }
-.main__item:hover .article__title {
+.layout .main__item:hover .article__title {
 	padding-bottom: 80px;
 }
-.main__item:hover .article__more {
+.layout .main__item:hover .article__more {
 	opacity: 1;
 }

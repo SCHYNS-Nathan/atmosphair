@@ -16,7 +16,7 @@
     font-display: auto;
 }
 
-$border-space: 160px;
+$border-space: 80px;
 
 @import "header.scss";
 @import "footer.scss";
@@ -247,12 +247,13 @@ em {
     background-image: url("../../src/images/bg_2.jpg");
     background-size: cover;
     height: 1000px;
-    padding: 80px 0 0 160px;
+    padding-top: 80px;
 }
 .contact__container {
     background-color: #fff;
     padding: 40px;
     width: 600px;
+    margin: auto;
 }
 .contact__title {
     line-height: 1.2;
@@ -312,4 +313,5 @@ textarea.contact__input {
 @import "publications.scss";
 @import "contact.scss";
 
-@import "1400px";
+@import "media_queries";
+@import "animation";

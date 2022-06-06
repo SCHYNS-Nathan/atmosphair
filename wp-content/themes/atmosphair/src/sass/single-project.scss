@@ -1,3 +1,7 @@
+.singleMain {
+	overflow-x: hidden;
+}
+
 .singleMain .main__return {
 	position: absolute;
 	top: 200px;
@@ -34,7 +38,7 @@
 	color: #fff;
 }
 .singleMain .what__title, .singleMain .why__title, .singleMain .who__title, .singleMain .result__title, .singleMain .conclusion__title, .singleMain .promotion__title, .singleMain .others__title {
-	padding: 20px 0 0 160px;
+	padding: 40px 0 0 160px;
 
 }
 .singleMain .what__text, .singleMain .why__text, .singleMain .result__text, .singleMain .conclusion__text, .singleMain .promotion__text {
@@ -89,20 +93,33 @@
 	display: grid;
 }
 
-.singleMain .how__title, .singleMain .how__step, .singleMain .how__description {
-	padding: 20px 40px 0 80px;
-}
 .singleMain .how__title {
-
+	padding: 20px 40px 20px 160px;
 }
 
 .singleMain .how__item {
 	grid-row: 1/-1;
 	grid-column: 1/-1;
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr;
 }
 .singleMain .how__fig img {
 	width: 50vw;
+	max-width: 600px;
 	height: auto;
+	grid-column: 1/2;
+	grid-row: 1/-1;
+}
+.singleMain .how__step {
+	grid-column: 2/3;
+	grid-row: 1/-1;
+}
+.singleMain .how__description {
+	grid-column: 2/3;
+	grid-row: 1/-1;
+	margin-top: 80px;
 }
 
 
@@ -196,6 +213,7 @@
 }
 .singleMain .key__text {
 	margin-left: 12px;
+	width: 300px;
 }
 
 .singleMain .main__promotion {

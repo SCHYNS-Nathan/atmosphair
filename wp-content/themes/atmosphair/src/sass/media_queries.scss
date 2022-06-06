@@ -1,0 +1,231 @@
+@media (min-width: 1400px) {
+	.main__stats, .main__morals {
+		justify-content: center;
+	}
+	.presentation__title, .layout .presentation__text, .projects__container, .articles__container, .actors__title, .timeline__title {
+		width: 1200px;
+		margin: auto;
+	}
+	.publications .main__list {
+		width: 1200px;
+		margin: -160px auto 80px;
+	}
+
+	.main__presentation, .main__contact {
+		padding-right: 0;
+		padding-left: 0;
+	}
+	.contact__container {
+		margin: auto;
+	}
+
+	.projects .projects__item, .projects .projects__item:nth-child(2n) {
+		justify-content: center;
+	}
+}
+@media (min-width: 880px) and (max-width: 1200px) {
+	.projects .projects__project {
+		width: 880px;
+	}
+	.projects .projects__item:nth-child(2n) .project__fig {
+		margin-left: 10px;
+	}
+}
+
+@media (min-width: 480px) and (max-width: 880px) {
+	.header__list {
+		display: none;
+	}
+	.main__title {
+		font-size: 30px;
+		padding: 45vh 80px 0;
+		text-align: center;
+	}
+	.main__stats, .main__presentation {
+		padding: 40px 0;
+	}
+	.main__stats {
+		flex-direction: column;
+	}
+	.stats__stat:nth-child(2n), .stats__stat {
+		margin: 20px auto 0;
+		text-align: center;
+	}
+	.stats__stat {
+		max-width: 50vw;
+	}
+	.main__presentation {
+		padding: 40px 10vw;
+	}
+	.presentation__conclusion {
+		padding-bottom: 80px;
+	}
+
+	.main__actors {
+		margin: 0;
+		width: 100vw;
+		min-width: unset;
+	}
+	.actors__image {
+		margin: 0;
+	}
+	.actors__text {
+		padding: 20px 20px 0 220px;
+	}
+	.actors__link {
+		display: block;
+		text-align: center;
+		padding: 20px 0;
+		margin-top: 20px;
+	}
+
+	.main__projects {
+		padding: 0 10vw 0;
+		margin-top: 80px;
+	}
+	.main__articles {
+		padding: 20px 10vw 0;
+	}
+	.projects__container, .articles__container {
+		display: flex;
+		flex-direction: column;
+	}
+	h3 {
+		display: block;
+	}
+	.projects__link, .articles__link {
+		margin-top: 20px;
+		width: 60vw;
+	}
+	.projects__list, .articles__list {
+		margin: 40px 0 0 -10vw;
+	}
+	.projects__list li:first-child, .articles__list .main__item:first-of-type {
+		margin-left: 5vw;
+	}
+	.projects__list li:nth-child(5), .articles__list .main__item:last-of-type {
+		margin-right: 5vw;
+	}
+	.contact__container {
+		padding: 20px 10vw;
+		width: unset;
+		margin: auto;
+	}
+
+	.footer {
+		padding: 0 40px 40px;
+		display: grid;
+		grid-template-rows: auto auto;
+		grid-template-columns: 1fr 1fr;
+	}
+	.footer__logos {
+		grid-column: 1/-1;
+		padding: 60px 0 0;
+		border-left: none;
+		display: flex;
+		justify-content: space-between;
+	}
+
+
+	.main__about .actors__title, .main__about .timeline__title {
+		padding-left: 5vw;
+	}
+	.main__about .actors__actor {
+		padding: 40px 5vw;
+		flex-direction: column-reverse;
+	}
+	.main__about .actors__actor:nth-child(2n-1) {
+		flex-direction: column-reverse;
+	}
+	.main__about .actor__thumb {
+		max-width: 90vw;
+		margin-top: 20px;
+	}
+
+	.main__about .actor__title, .main__about .actor__text  {
+		margin-bottom: 10px;
+	}
+	.main__about .actor__link {
+		margin-bottom: 40px;
+	}
+
+	.main__morals {
+		padding: 40px 10vw;
+	}
+	.morals__title {
+		font-size: 20px;
+	}
+	.morals__moral:nth-child(n+2) {
+		margin: 0 5px;
+	}
+	.main__timeline {
+		padding: 20px 0;
+	}
+	.timeline__container {
+		margin: 20px 0;
+	}
+
+	.projects .main__title {
+		padding: 40px 5vw 20px;
+		text-align: left;
+	}
+	.projects .projects__project {
+		background-color: #fff;
+		width: 100vw;
+		min-height: 650px;
+	}
+	.projects .projects__project div {
+		grid-template-areas:
+			"fig"
+			"name"
+			"text"
+			"link";
+	}
+	.projects .projects__item:nth-child(2n) .project__container {
+		grid-template-areas:
+			"fig"
+			"name"
+			"text"
+			"link";
+	}
+	.projects .project__fig {
+		width: auto;
+		margin: auto;
+	}
+	.projects .projects__item:nth-child(2n) .project__fig {
+		margin: auto;
+
+	}
+	.projects div div.project__name {
+		justify-content: center;
+		height: 100px;
+		width: 100vw;
+		margin: 10px auto;
+	}
+	.projects .project__description {
+		margin: 0 auto 20px;
+		width: 440px;
+	}
+	.projects .project__link {
+		margin: 0 auto 20px;
+	}
+
+
+	.publications .main__container {
+		display: flex;
+		flex-direction: column;
+	}
+	.publications .main__filter {
+		margin: 20px auto 0;
+		max-width: 400px;
+	}
+	.publications .main__list {
+		display: flex;
+		flex-direction: column;
+		margin: 0;
+		grid-gap: 40px;
+	}
+}
+@media (min-width: 320px) and (max-width: 480px) {
+
+}
