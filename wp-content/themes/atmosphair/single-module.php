@@ -19,9 +19,11 @@
                 <?= get_field('pourquoi', false, false); ?>
             </p>
         </article>
+        <!--
         <article class="main__technicals">
             <h3 class="technicals__title"><?= __('Fiche technique du projet','atmosphair') ?></h3>
         </article>
+        -->
         <article class="main__how">
             <h3 class="how__title"><?= __('Comment ça marche ?','atmosphair') ?></h3>
             <ol class="how__list">
