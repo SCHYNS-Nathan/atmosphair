@@ -21,7 +21,9 @@ $border-space: 80px;
 @import "header.scss";
 @import "footer.scss";
 
-
+html {
+    scroll-behavior: smooth;
+}
 body {
     font-family: Livvic, sans-serif;
     background-color: #ededed;
@@ -146,8 +148,8 @@ em {
     font-family: LivvicBlack, sans-serif;
     text-align: center;
 }
-@import "projects-slider.scss";
 
+@import "projects-slider.scss";
 
 .main__articles {
     background-color: #000;
@@ -170,7 +172,7 @@ em {
 }
 .articles__list {
     width: 100vw;
-    margin: 40px 0 0 -160px;
+    margin: 40px 0 0 -80px;
     padding-bottom: 40px;
     overflow-x: auto;
     overflow-y: hidden;
@@ -186,9 +188,14 @@ em {
     background-size: cover;
 }
 .articles__list .main__item:first-of-type {
-    margin-left: 160px;
+    margin-left: 80px;
 }
 .articles__list .main__item:last-of-type {
+    margin-right: 80px;
+}
+.article__fulllink {
+    text-decoration: none;
+    color: inherit;
 }
 .main__item .main__articleContainer {
     display: flex;
@@ -238,7 +245,8 @@ em {
     height: 400px;
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
+    background-color: rgba(0,0,0,.5);
 }
 
 
@@ -270,6 +278,7 @@ em {
     border: 1px solid rgba(0, 0, 0, .25);
     font-size: 16px;
     padding-left: 8px;
+    background-color: transparent;
 }
 textarea.contact__input {
     resize: vertical;

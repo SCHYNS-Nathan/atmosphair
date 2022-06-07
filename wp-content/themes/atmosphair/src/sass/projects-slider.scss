@@ -1,7 +1,7 @@
 .projects__list {
 	width: 100vw;
 	height: 600px;
-	margin: 40px 0 0 -160px;
+	margin: 40px 0 0 -80px;
 	padding-bottom: 20px;
 	overflow-x: auto;
 	overflow-y: hidden;
@@ -19,7 +19,7 @@
 	vertical-align: top;
 }
 .projects__list li:first-child {
-	margin-left: 160px;
+	margin-left: 80px;
 	grid-area: a;
 }
 .projects__list li:nth-child(2) {
@@ -33,25 +33,100 @@
 }
 .projects__list li:nth-child(5) {
 	grid-area: e;
-	margin-right: 15px;
 }
 .projects__list li:nth-child(6) {
 	grid-area: f;
+	margin-right: 80px;
 }
 .layout .projects__item:nth-child(3n+2) {
 	height: 40px;
 }
 
-.projects__item .projects__project {
+.layout .projects__item .projects__project {
 	box-shadow: 0 5px 9px 3px rgba(0, 0, 0, 0.25);
 	width: 440px;
 }
-.projects__item .project__container {
+.layout .projects__item .project__container {
 	display: grid;
 	width: 440px;
 	height: 200px;
 	background-color: #fff;
 }
+
+
+.layout .projects__item .project__container:hover {
+	background-color: #DDA458;
+	transition: .2s ease-in-out;
+}
+.layout .projects__item .project__container:hover .project__fig img {
+	opacity: 0;
+	transition: .2s ease-in-out;
+}
+.layout .projects__item:nth-child(3n+1) .project__container:hover .project__name {
+	transform: translateY(-200px);
+	color: #fff;
+	transition: .2s ease-in-out;
+}
+.layout .projects__item:nth-child(3n+1) .project__container:hover .project__description {
+	display: inline-block;
+	margin: -160px 20px 0;
+	color: #fff;
+	transition: .2s ease-in-out;
+}
+.layout .projects__item:nth-child(3n+1) .project__container:hover .project__link {
+	display: inline-block;
+	margin: -40px 20px 0;
+	color: #fff;
+	text-decoration: none;
+	font-family: LivvicBlack, sans-serif;
+	transition: .2s ease-in-out;
+}
+
+.layout .projects__item:nth-child(3n+2) .project__container:hover .project__name {
+	transform: translateX(60px);
+	color: #fff;
+	transition: .2s ease-in-out;
+}
+.layout .projects__item:nth-child(3n+2) .project__container:hover .project__description {
+	display: flex;
+	align-items: center;
+	color: #fff;
+	transition: .2s ease-in-out;
+}
+.layout .projects__item:nth-child(3n+2) .project__container:hover .project__link {
+	display: flex;
+	align-items: center;
+	color: #fff;
+	text-decoration: none;
+	font-family: LivvicBlack, sans-serif;
+	transition: .2s ease-in-out;
+	margin: 0 20px 0;
+}
+
+.layout .projects__item:nth-child(3n+3) .project__container:hover .project__name {
+	transform: translateX(-20px);
+	color: #fff;
+	transition: .2s ease-in-out;
+}
+.layout .projects__item:nth-child(3n+3) .project__container:hover .project__description {
+	display: flex;
+	align-items: center;
+	color: #fff;
+	transition: .2s ease-in-out;
+}
+.layout .projects__item:nth-child(3n+3) .project__container:hover .project__link {
+	display: flex;
+	align-items: center;
+	color: #fff;
+	text-decoration: none;
+	font-family: LivvicBlack, sans-serif;
+	transition: .2s ease-in-out;
+	margin: 0 20px 0;
+
+}
+
+
+
 
 .layout .projects__item:nth-child(3n+1) .project__container{
 	height: 440px;
@@ -65,11 +140,11 @@
 	display: flex;
 	flex-direction: row-reverse;
 	justify-content: space-between;
-
 }
-.layout .projects__item:nth-child(3n+2) .project__name {
+.layout .projects__item:nth-child(3n+2) .project__name a {
 	flex-direction: column-reverse;
 	width: 220px;
+	margin-top: 20px;
 }
 .layout .projects__item:nth-child(3n+2) .project__fig {
 	width: 220px;
@@ -79,10 +154,10 @@
 	display: flex;
 	justify-content: space-between;
 }
-.layout .projects__item:nth-child(3n+3) .project__name {
+.layout .projects__item:nth-child(3n+3) .project__name a {
 	flex-direction: column-reverse;
 	width: 220px;
-
+	margin-top: 20px;
 }
 .layout .projects__item:nth-child(3n+3) .project__fig {
 	width: 220px;
@@ -90,9 +165,6 @@
 
 
 .layout .projects__item .project__name {
-	display: flex;
-	justify-content: center;
-	align-items: center;
 	order: 2;
 }
 .layout .project__name .project__title {
@@ -104,6 +176,13 @@
 	height: 100px;
 }
 
+.project__fulllink {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
+	color: inherit;
+}
 
 .layout .project__fig {
 	width: 100%;

@@ -1,9 +1,11 @@
-<li class="projects__item" itemscope itemtype="https://schema.org/Project">
+<li class="projects__item fade-in" itemscope itemtype="https://schema.org/Project">
     <article class="projects__project">
         <div class="project__container">
             <div class="project__name">
-                <h4 class="project__title" itemprop="name"><?= get_the_title(); ?></h4>
-                <img class="project__icon" src="<?= get_template_directory_uri() . "/src/images/" . get_field('nom', false, false) . ".svg"; ?>" alt="<?= __('Icône du projet','atmosph\'air'); ?>">
+                <a class="project__fulllink" href="<?= get_the_permalink(); ?>">
+                    <h4 class="project__title" itemprop="name"><?= get_the_title(); ?></h4>
+                    <img class="project__icon" src="<?= get_template_directory_uri() . "/src/images/" . get_field('nom', false, false) . ".svg"; ?>" alt="<?= __('Icône du projet','atmosph\'air'); ?>">
+                </a>
             </div>
             <figure class="project__fig">
                 <?= get_the_post_thumbnail(null, 'medium', ['class' => 'actor__thumb']); ?>

@@ -1,7 +1,7 @@
 <?php /* Template Name: Template page Articles */ ?>
 <?php get_header(); ?>
 <main class="publications">
-    <div class="main__container">
+    <div class="main__container fade-in">
         <h2 class="main__title"><?= __('On parle de nous !','atmosph\'air'); ?></h2>
         <button class="main__filter"><?= __('Filtrer','atmosph\'air'); ?></button>
     </div>

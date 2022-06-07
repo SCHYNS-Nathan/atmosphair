@@ -1,16 +1,15 @@
-class DW_Controller
-{
-    constructor()
-    {
-        // Ici, le DOM n'est pas encore prêt
-        // Pour le moment, rien à faire.
-    }
-
-    run()
-    {
-        // Ici, le DOM est prêt.
-    }
+const items = document.querySelectorAll('.fade-in');
+for (const item of items) {
+    item.classList.add('fade');
 }
-
-window.dw = new DW_Controller();
-window.addEventListener('load', () => window.dw.run());
+const cb = function(entries){
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            entry.target.classList.add('inview');
+        }
+    });
+}
+const obs = new IntersectionObserver(cb);
+for(let i=0; i < items.length; i++){
+    obs.observe(items[i]);
+}

@@ -136,9 +136,10 @@
 		margin: -40ox auto 0;
 		width: 100vw;
 		min-width: unset;
+		height: unset;
 	}
 	.actors__image {
-		margin: 0 20px 0 0;
+		margin: 0;
 		width: auto;
 	}
 	.actors__text {
@@ -319,7 +320,7 @@
 		padding: 160px 80px 40px;
 	}
 	.mainContact .main__contact {
-		margin: 0;
+		margin: 0 auto;
 		display: flex;
 		flex-direction: column;
 		height: unset;
@@ -342,6 +343,88 @@
 	.mainContact .contact__infos {
 		display: inline-block;
 		margin-top: 20px;
+	}
+
+	.singleMain .what__title, .singleMain .why__title, .singleMain .how__title, .singleMain .how__step, .singleMain .who__title, .singleMain .result__title, .singleMain .more__title, .singleMain .conclusion__title, .singleMain .promotion__title, .singleMain .others__title {
+		padding: 40px 0 0 80px;
+	}
+	.singleMain .what__text, .singleMain .why__text, .singleMain .who__text, .singleMain .result__text, .singleMain .more__text, .singleMain .conclusion__text, .singleMain .promotion__text {
+		padding: 20px 0 40px 80px;
+		width: 320px;
+	}
+	.singleMain .how__item {
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 40px;
+	}
+	.singleMain .how__description {
+		margin: 0;
+		padding: 0 0 0 80px;
+		width: 320px;
+	}
+	.singleMain .how__fig img {
+		width: 320px;
+	}
+	.singleMain .who__group {
+		min-width: 150px;
+	}
+	.singleMain .result__text {
+		padding-bottom: 40px;
+	}
+	.singleMain .result__map {
+		display: inline-block;
+		justify-content: center;
+		position: unset;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		opacity: 1;
+	}
+	.singleMain .result__map img {
+		width: 60vw;
+		height: auto;
+		margin: 0 80px 0;
+	}
+	.singleMain .result__number {
+		margin-top: 20px;
+		margin-left: 80px;
+	}
+	.singleMain .result__number:first-of-type {
+		margin-left: 80px;
+	}
+	.singleMain .result__link {
+		margin: 20px 0 80px 80px;
+	}
+	.singleMain .main__more {
+		display: block;
+	}
+	.singleMain .more__fig {
+		display: block;
+	}
+	.singleMain .more__fig img {
+		width: 60vw;
+		height: auto;
+		margin: 0 80px 20px;
+	}
+	.singleMain .more__link, .singleMain .promotion__link, .singleMain .conclusion__keys {
+		display: block;
+		margin: auto;
+	}
+	.singleMain .keys__key {
+		margin-bottom: 10px;
+	}
+	.singleMain .keys__key:last-child {
+		margin-bottom: 40px;
+	}
+	.singleMain .main__promotion {
+		display: flex;
+		flex-direction: column;
+	}
+	.singleMain .promotion__image {
+		margin: 20px auto 40px;
+	}
+	.singleMain .projects__item:first-child {
+		margin-left: 80px;
 	}
 }
 @media (max-width: 480px) {
@@ -383,4 +466,50 @@
 		padding: 20px 0;
 	}
 
+	.singleMain .main__return {
+		top: 200px;
+		left: 20px;
+	}
+	.singleMain .main__title {
+		padding: 50vh 20px 160px;
+	}
+	.singleMain .what__title, .singleMain .why__title, .singleMain .how__title, .singleMain .how__step, .singleMain .who__title, .singleMain .result__title, .singleMain .more__title, .singleMain .conclusion__title, .singleMain .promotion__title, .singleMain .others__title {
+		padding: 40px 0 0 20px;
+	}
+	.singleMain .what__text, .singleMain .why__text, .singleMain .who__text, .singleMain .how__description ,.singleMain .result__text, .singleMain .more__text, .singleMain .conclusion__text, .singleMain .promotion__text {
+		padding: 20px 0 40px 20px;
+		width: 280px;
+	}
+	.singleMain .how__fig img {
+		margin-left: 20px;
+	}
+	.singleMain .who__container {
+		flex-direction: column;
+		justify-content: center;
+		margin: auto;
+	}
+	.singleMain .who__group {
+		margin-bottom: 40px;
+	}
+	.singleMain .result__number:first-of-type {
+		margin-left: 20px;
+	}
+	.singleMain .result__map img {
+		width: 80vw;
+		margin: 0 20px 0;
+	}
+	.singleMain .result__number {
+		margin-left: 20px;
+	}
+	.singleMain .more__fig img {
+		margin: 20px;
+	}
+	.singleMain .result__link, .singleMain .more__link {
+		display: flex;
+		align-items: center;
+		margin: 20px;
+	}
+	.singleMain .main__arrow {
+		left: 60vw;
+	}
 }

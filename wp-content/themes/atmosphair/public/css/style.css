@@ -176,6 +176,10 @@ table {
   height: 40px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: Livvic, sans-serif;
   background-color: #ededed;
@@ -326,7 +330,7 @@ em {
 .projects__list {
   width: 100vw;
   height: 600px;
-  margin: 40px 0 0 -160px;
+  margin: 40px 0 0 -80px;
   padding-bottom: 20px;
   overflow-x: auto;
   overflow-y: hidden;
@@ -343,7 +347,7 @@ em {
 }
 
 .projects__list li:first-child {
-  margin-left: 160px;
+  margin-left: 80px;
   grid-area: a;
 }
 
@@ -361,27 +365,105 @@ em {
 
 .projects__list li:nth-child(5) {
   grid-area: e;
-  margin-right: 15px;
 }
 
 .projects__list li:nth-child(6) {
   grid-area: f;
+  margin-right: 80px;
 }
 
 .layout .projects__item:nth-child(3n+2) {
   height: 40px;
 }
 
-.projects__item .projects__project {
+.layout .projects__item .projects__project {
   box-shadow: 0 5px 9px 3px rgba(0, 0, 0, 0.25);
   width: 440px;
 }
 
-.projects__item .project__container {
+.layout .projects__item .project__container {
   display: grid;
   width: 440px;
   height: 200px;
   background-color: #fff;
+}
+
+.layout .projects__item .project__container:hover {
+  background-color: #DDA458;
+  transition: 0.2s ease-in-out;
+}
+
+.layout .projects__item .project__container:hover .project__fig img {
+  opacity: 0;
+  transition: 0.2s ease-in-out;
+}
+
+.layout .projects__item:nth-child(3n+1) .project__container:hover .project__name {
+  transform: translateY(-200px);
+  color: #fff;
+  transition: 0.2s ease-in-out;
+}
+
+.layout .projects__item:nth-child(3n+1) .project__container:hover .project__description {
+  display: inline-block;
+  margin: -160px 20px 0;
+  color: #fff;
+  transition: 0.2s ease-in-out;
+}
+
+.layout .projects__item:nth-child(3n+1) .project__container:hover .project__link {
+  display: inline-block;
+  margin: -40px 20px 0;
+  color: #fff;
+  text-decoration: none;
+  font-family: LivvicBlack, sans-serif;
+  transition: 0.2s ease-in-out;
+}
+
+.layout .projects__item:nth-child(3n+2) .project__container:hover .project__name {
+  transform: translateX(60px);
+  color: #fff;
+  transition: 0.2s ease-in-out;
+}
+
+.layout .projects__item:nth-child(3n+2) .project__container:hover .project__description {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  transition: 0.2s ease-in-out;
+}
+
+.layout .projects__item:nth-child(3n+2) .project__container:hover .project__link {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  text-decoration: none;
+  font-family: LivvicBlack, sans-serif;
+  transition: 0.2s ease-in-out;
+  margin: 0 20px 0;
+}
+
+.layout .projects__item:nth-child(3n+3) .project__container:hover .project__name {
+  transform: translateX(-20px);
+  color: #fff;
+  transition: 0.2s ease-in-out;
+}
+
+.layout .projects__item:nth-child(3n+3) .project__container:hover .project__description {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  transition: 0.2s ease-in-out;
+}
+
+.layout .projects__item:nth-child(3n+3) .project__container:hover .project__link {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  text-decoration: none;
+  font-family: LivvicBlack, sans-serif;
+  transition: 0.2s ease-in-out;
+  margin: 0 20px 0;
 }
 
 .layout .projects__item:nth-child(3n+1) .project__container {
@@ -399,9 +481,10 @@ em {
   justify-content: space-between;
 }
 
-.layout .projects__item:nth-child(3n+2) .project__name {
+.layout .projects__item:nth-child(3n+2) .project__name a {
   flex-direction: column-reverse;
   width: 220px;
+  margin-top: 20px;
 }
 
 .layout .projects__item:nth-child(3n+2) .project__fig {
@@ -413,9 +496,10 @@ em {
   justify-content: space-between;
 }
 
-.layout .projects__item:nth-child(3n+3) .project__name {
+.layout .projects__item:nth-child(3n+3) .project__name a {
   flex-direction: column-reverse;
   width: 220px;
+  margin-top: 20px;
 }
 
 .layout .projects__item:nth-child(3n+3) .project__fig {
@@ -423,9 +507,6 @@ em {
 }
 
 .layout .projects__item .project__name {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   order: 2;
 }
 
@@ -437,6 +518,14 @@ em {
 .layout .project__name .project__icon {
   width: 100px;
   height: 100px;
+}
+
+.project__fulllink {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
 }
 
 .layout .project__fig {
@@ -493,7 +582,7 @@ em {
 
 .articles__list {
   width: 100vw;
-  margin: 40px 0 0 -160px;
+  margin: 40px 0 0 -80px;
   padding-bottom: 40px;
   overflow-x: auto;
   overflow-y: hidden;
@@ -511,7 +600,16 @@ em {
 }
 
 .articles__list .main__item:first-of-type {
-  margin-left: 160px;
+  margin-left: 80px;
+}
+
+.articles__list .main__item:last-of-type {
+  margin-right: 80px;
+}
+
+.article__fulllink {
+  text-decoration: none;
+  color: inherit;
 }
 
 .main__item .main__articleContainer {
@@ -571,7 +669,8 @@ em {
   height: 400px;
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .main__contact {
@@ -606,6 +705,7 @@ em {
   border: 1px solid rgba(0, 0, 0, 0.25);
   font-size: 16px;
   padding-left: 8px;
+  background-color: transparent;
 }
 
 textarea.contact__input {
@@ -1138,6 +1238,14 @@ textarea.contact__input {
 .singleMain .main__promotion {
   background-color: #000;
   color: #fff;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto;
+}
+
+.singleMain .promotion__text {
+  grid-row: 2/3;
+  grid-column: 1/2;
 }
 
 .singleMain .promotion__link {
@@ -1148,6 +1256,55 @@ textarea.contact__input {
   text-transform: uppercase;
   font-family: LivvicBlack, sans-serif;
   text-align: center;
+  grid-row: 3/4;
+  grid-column: 1/2;
+  max-width: 240px;
+  margin: 0 0 20px 160px;
+}
+
+.singleMain .promotion__image {
+  grid-row: 1/-1;
+  grid-column: 2/3;
+  max-width: 600px;
+  height: auto;
+}
+
+.singleMain .projects__list {
+  margin-left: 0;
+}
+
+.singleMain .projects__item:first-child {
+  margin-left: 160px;
+}
+
+.singleMain .projects__item:last-child {
+  margin-right: 160px;
+}
+
+.singleMain .projects__item:last-child .project__link {
+  display: none;
+  font-size: 16px;
+}
+
+.singleMain .projects__item:last-child .project__title {
+  font-size: 40px;
+}
+
+.singleMain .main__arrow {
+  position: relative;
+  left: 80vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+  color: #fff;
+  font-size: 50px;
+  font-family: LivvicBlack, sans-serif;
+  text-decoration: none;
+  width: 80px;
+  height: 80px;
+  transform: rotate(180deg);
+  margin: 20px 0 -20px;
 }
 
 .publications .main__container {
@@ -1174,7 +1331,7 @@ textarea.contact__input {
 
 .publications .main__list {
   display: grid;
-  grid-template-rows: 240px repeat(3, 400px);
+  grid-template-rows: 240px auto;
   grid-template-columns: 1fr 1fr 1fr;
   margin: -160px 80px 80px;
   grid-gap: 40px;
@@ -1206,7 +1363,7 @@ textarea.contact__input {
 }
 
 .publications .main__articleContainer {
-  background: transparent;
+  background: linear-gradient(0deg, rgb(255, 255, 255) 0%, rgba(0, 0, 0, 0) 100%);
   max-width: 860px;
   min-width: 170px;
 }
@@ -1252,6 +1409,15 @@ textarea.contact__input {
   padding: 40px 20px;
   max-width: 800px;
   height: 700px;
+}
+
+.mainContact .contact__infos a, .mainContact .infos__promo a {
+  color: #000;
+  font-family: LivvicBold, sans-serif;
+}
+
+.mainContact .contact__infos .infos__link, .mainContact .infos__promo a {
+  text-decoration: none;
 }
 
 .mainContact .contact__form {
@@ -1449,10 +1615,11 @@ textarea.contact__input {
     margin: -40ox auto 0;
     width: 100vw;
     min-width: unset;
+    height: unset;
   }
 
   .actors__image {
-    margin: 0 20px 0 0;
+    margin: 0;
     width: auto;
   }
 
@@ -1655,7 +1822,7 @@ textarea.contact__input {
   }
 
   .mainContact .main__contact {
-    margin: 0;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     height: unset;
@@ -1682,6 +1849,108 @@ textarea.contact__input {
   .mainContact .contact__infos {
     display: inline-block;
     margin-top: 20px;
+  }
+
+  .singleMain .what__title, .singleMain .why__title, .singleMain .how__title, .singleMain .how__step, .singleMain .who__title, .singleMain .result__title, .singleMain .more__title, .singleMain .conclusion__title, .singleMain .promotion__title, .singleMain .others__title {
+    padding: 40px 0 0 80px;
+  }
+
+  .singleMain .what__text, .singleMain .why__text, .singleMain .who__text, .singleMain .result__text, .singleMain .more__text, .singleMain .conclusion__text, .singleMain .promotion__text {
+    padding: 20px 0 40px 80px;
+    width: 320px;
+  }
+
+  .singleMain .how__item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+  }
+
+  .singleMain .how__description {
+    margin: 0;
+    padding: 0 0 0 80px;
+    width: 320px;
+  }
+
+  .singleMain .how__fig img {
+    width: 320px;
+  }
+
+  .singleMain .who__group {
+    min-width: 150px;
+  }
+
+  .singleMain .result__text {
+    padding-bottom: 40px;
+  }
+
+  .singleMain .result__map {
+    display: inline-block;
+    justify-content: center;
+    position: unset;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    opacity: 1;
+  }
+
+  .singleMain .result__map img {
+    width: 60vw;
+    height: auto;
+    margin: 0 80px 0;
+  }
+
+  .singleMain .result__number {
+    margin-top: 20px;
+    margin-left: 80px;
+  }
+
+  .singleMain .result__number:first-of-type {
+    margin-left: 80px;
+  }
+
+  .singleMain .result__link {
+    margin: 20px 0 80px 80px;
+  }
+
+  .singleMain .main__more {
+    display: block;
+  }
+
+  .singleMain .more__fig {
+    display: block;
+  }
+
+  .singleMain .more__fig img {
+    width: 60vw;
+    height: auto;
+    margin: 0 80px 20px;
+  }
+
+  .singleMain .more__link, .singleMain .promotion__link, .singleMain .conclusion__keys {
+    display: block;
+    margin: auto;
+  }
+
+  .singleMain .keys__key {
+    margin-bottom: 10px;
+  }
+
+  .singleMain .keys__key:last-child {
+    margin-bottom: 40px;
+  }
+
+  .singleMain .main__promotion {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .singleMain .promotion__image {
+    margin: 20px auto 40px;
+  }
+
+  .singleMain .projects__item:first-child {
+    margin-left: 80px;
   }
 }
 @media (max-width: 480px) {
@@ -1729,14 +1998,90 @@ textarea.contact__input {
   .projects .project__link {
     padding: 20px 0;
   }
+
+  .singleMain .main__return {
+    top: 200px;
+    left: 20px;
+  }
+
+  .singleMain .main__title {
+    padding: 50vh 20px 160px;
+  }
+
+  .singleMain .what__title, .singleMain .why__title, .singleMain .how__title, .singleMain .how__step, .singleMain .who__title, .singleMain .result__title, .singleMain .more__title, .singleMain .conclusion__title, .singleMain .promotion__title, .singleMain .others__title {
+    padding: 40px 0 0 20px;
+  }
+
+  .singleMain .what__text, .singleMain .why__text, .singleMain .who__text, .singleMain .how__description, .singleMain .result__text, .singleMain .more__text, .singleMain .conclusion__text, .singleMain .promotion__text {
+    padding: 20px 0 40px 20px;
+    width: 280px;
+  }
+
+  .singleMain .how__fig img {
+    margin-left: 20px;
+  }
+
+  .singleMain .who__container {
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+  }
+
+  .singleMain .who__group {
+    margin-bottom: 40px;
+  }
+
+  .singleMain .result__number:first-of-type {
+    margin-left: 20px;
+  }
+
+  .singleMain .result__map img {
+    width: 80vw;
+    margin: 0 20px 0;
+  }
+
+  .singleMain .result__number {
+    margin-left: 20px;
+  }
+
+  .singleMain .more__fig img {
+    margin: 20px;
+  }
+
+  .singleMain .result__link, .singleMain .more__link {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+  }
+
+  .singleMain .main__arrow {
+    left: 60vw;
+  }
 }
+.fade {
+  transition: ease-in-out 0.75s;
+  opacity: 0;
+  transform: translateY(2em);
+}
+
+.inview {
+  opacity: 1;
+  transform: none;
+  transition-delay: 0.25s;
+}
+
 .actors__link:hover {
   background-color: #DDA458;
 }
 
-.projects__link:hover, .articles__link:hover, .main__about .actor__link:hover, .projects .project__link:hover {
+.projects__link:hover, .articles__link:hover, .main__about .actor__link:hover, .projects .project__link:hover, .singleMain a:hover {
   background-color: #DDA458;
   color: #fff;
+}
+
+.singleMain .main__return:hover, .publications a:hover {
+  background-color: transparent;
+  text-decoration: underline;
 }
 
 .contact__input:focus {
@@ -1769,4 +2114,8 @@ textarea.contact__input {
 
 .layout .main__item:hover .article__more {
   opacity: 1;
+}
+
+.mainContact .contact__infos .infos__link:hover, .mainContact .infos__promo a:hover {
+  text-decoration: underline;
 }

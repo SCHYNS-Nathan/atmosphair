@@ -15,6 +15,13 @@
 	max-width: 800px;
 	height: 700px;
 }
+.mainContact .contact__infos a, .mainContact .infos__promo a {
+	color: #000;
+	font-family: LivvicBold, sans-serif;
+}
+.mainContact .contact__infos .infos__link, .mainContact .infos__promo a {
+	text-decoration: none;
+}
 
 .mainContact .contact__form {
 	grid-column: 2/3;

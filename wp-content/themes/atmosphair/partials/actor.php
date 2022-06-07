@@ -1,4 +1,4 @@
-<div class="actors__actor" itemscope itemtype="https://schema.org/Organization">
+<div class="actors__actor fade-in" itemscope itemtype="https://schema.org/Organization">
     <div class="actor__container">
         <h4 class="actor__title" itemprop="name"><?= get_field('nom', false, false); ?></h4>
         <p class="actor__text">

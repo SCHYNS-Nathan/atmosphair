@@ -1,9 +1,24 @@
+.fade {
+	transition: ease-in-out .75s;
+	opacity: 0;
+	transform: translateY(2em);
+}
+.inview {
+	opacity: 1;
+	transform: none;
+	transition-delay: .25s;
+}
+
 .actors__link:hover {
 	background-color: #DDA458;
 }
-.projects__link:hover, .articles__link:hover, .main__about .actor__link:hover, .projects .project__link:hover {
+.projects__link:hover, .articles__link:hover, .main__about .actor__link:hover, .projects .project__link:hover, .singleMain a:hover {
 	background-color: #DDA458;
 	color: #fff;
+}
+.singleMain .main__return:hover, .publications a:hover {
+	background-color: transparent;
+	text-decoration: underline;
 }
 .contact__input:focus {
 	border: 1px solid #000;
@@ -32,4 +47,9 @@
 }
 .layout .main__item:hover .article__more {
 	opacity: 1;
+}
+
+
+.mainContact .contact__infos .infos__link:hover, .mainContact .infos__promo a:hover {
+	text-decoration: underline;
 }
