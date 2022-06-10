@@ -22,10 +22,11 @@
 .mainContact .contact__infos .infos__link, .mainContact .infos__promo a {
 	text-decoration: none;
 }
-
-.mainContact .contact__form {
+.main__contact #wpcf7-f244-o1 {
 	grid-column: 2/3;
 	grid-row: 1/-1;
+}
+.mainContact form {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
@@ -33,7 +34,7 @@
 	padding-left: 20px;
 	margin-top: -40px;
 }
-.mainContact .contact__form div:first-child {
+.mainContact form div:first-child {
 	margin-top: 80px;
 }
 
@@ -54,3 +55,24 @@
 .mainContact .infos__promo {
 	margin-top: 80px;
 }
+
+form br {
+	display: none;
+}
+
+.wpcf7-response-output {
+	margin-top: 20px;
+	text-align: center;
+}
+.screen-reader-response {
+	margin-top: 20px;
+}
+
+.mainContact .wpcf7-response-output {
+	margin-top: 40px;
+	text-align: left;
+}
+.mainContact .screen-reader-response {
+	display: none;
+}
+

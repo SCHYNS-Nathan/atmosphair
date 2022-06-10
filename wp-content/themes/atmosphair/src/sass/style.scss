@@ -255,6 +255,7 @@ em {
     background-size: cover;
     height: 1000px;
     padding-top: 80px;
+    padding-bottom: 40px;
 }
 .contact__container {
     background-color: #fff;
@@ -269,6 +270,7 @@ em {
     display: block;
     margin-top: 40px;
     font-family: LivvicBold, sans-serif;
+    cursor: pointer;
 }
 .contact__input, .contact__select {
     font-family: Livvic, sans-serif;
@@ -279,6 +281,7 @@ em {
     font-size: 16px;
     padding-left: 8px;
     background-color: transparent;
+    box-sizing: border-box;
 }
 textarea.contact__input {
     resize: vertical;
@@ -296,6 +299,7 @@ textarea.contact__input {
     text-transform: uppercase;
     font-family: LivvicBlack, sans-serif;
     border: none;
+    cursor: pointer;
 }
 
 
@@ -320,6 +324,8 @@ textarea.contact__input {
 @import "single-project.scss";
 @import "publications.scss";
 @import "contact.scss";
+@import "404.scss";
+@import "privacy.scss";
 
 @import "media_queries";
 @import "animation";

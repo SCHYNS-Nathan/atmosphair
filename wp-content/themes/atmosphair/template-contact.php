@@ -1,7 +1,7 @@
 <?php /* Template Name: Template page Contact */ ?>
 <?php get_header(); ?>
     <main class="mainContact">
-        <h2 class="main__title fade-in"><?= __('Une question ? Contactez-nous !','atmosphair') ?></h2>
+        <h2 class="main__title"><?= __('Une question ? Contactez-nous !','atmosphair') ?></h2>
         <section class="main__contact">
             <h3 class="contact__title fade-in"><?= __('Remplissez le formulaire ou utilisez l’un de nos nombreux moyens de contact !','atmosphair') ?></h3>
             <div class="contact__infos fade-in" itemscope itemtype="https://schema.org/Organization">
@@ -24,34 +24,7 @@
                 </p>
                 <a class="infos__link fade-in" href="https://www.hepl.be/fr/master-ingenieur-industriel/electronique-systemes-embarques"><?= __('Visite la page d’inscription de la HEPL','atmosphair') ?></a>
             </div>
-            <form class="contact__form">
-                <div class="fade-in">
-                    <label class="contact__label" for="name"><?= __('Votre nom','atmosphair'); ?></label>
-                    <input class="contact__input" id="name" name="name" placeholder="<?= __('Nom','atmosphair'); ?>" required>
-                </div>
-                <div class="fade-in">
-                    <label class="contact__label" for="firstname"><?= __('Votre prénom','atmosphair'); ?></label>
-                    <input class="contact__input" id="firstname" name="firstname" placeholder="<?= __('Prénom','atmosphair'); ?>" required>
-                </div>
-                <div class="fade-in">
-                    <label class="contact__label" for="mail"><?= __('Votre adresse mail','atmosphair'); ?></label>
-                    <input class="contact__input" id="mail" name="mail" placeholder="<?= __('nom.prénom@email.com','atmosphair'); ?>" required>
-                </div>
-                <div class="fade-in">
-                    <label class="contact__label" for="subject"><?= __('Sujet','atmosphair'); ?></label>
-                    <select class="contact__select" id="subject" name="subject">
-                        <option value="issep"><?= __('Question à propos des résultats','atmosphair'); ?></option>
-                        <option value="hepl"><?= __('Question à propos de la section électronique et systèmes embarqués','atmosphair'); ?></option>
-                        <option value="issep"><?= __('Achat pour le secteur privé','atmosphair'); ?></option>
-                        <option value="issep"><?= __('Achat pour le secteur public','atmosphair'); ?></option>
-                    </select>
-                </div>
-                <div class="fade-in">
-                    <label class="contact__label" for="message"><?= __('Votre message','atmosphair'); ?></label>
-                    <textarea class="contact__input" id="message" name="message" placeholder="<?= __('Écrivez votre message ici','atmosphair'); ?>" required></textarea>
-                </div>
-                <input class="contact__submit fade-in" type="submit">
-            </form>
+            <?= do_shortcode('[contact-form-7 id="244" title="Formulaire index"]') ?>
         </section>
         <section class="main__socials">
             <h3 class="socials__title fade-in"><?= __('Suivez-nous sur nos réseaux sociaux !') ?></h3>

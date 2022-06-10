@@ -112,7 +112,7 @@ table {
   display: none;
 }
 
-.footer {
+.footer__container {
   display: flex;
   justify-content: space-between;
   padding: 0 80px 40px;
@@ -174,6 +174,24 @@ table {
 
 .logos__svg {
   height: 40px;
+}
+
+.footer__privacy {
+  background-color: #fff;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 20px 5vw;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.privacy__link {
+  color: rgba(0, 0, 0, 0.5);
+  text-decoration: none;
+  margin-left: 40px;
+}
+
+.privacy__text {
+  color: rgba(0, 0, 0, 0.5);
 }
 
 html {
@@ -678,6 +696,7 @@ em {
   background-size: cover;
   height: 1000px;
   padding-top: 80px;
+  padding-bottom: 40px;
 }
 
 .contact__container {
@@ -695,6 +714,7 @@ em {
   display: block;
   margin-top: 40px;
   font-family: LivvicBold, sans-serif;
+  cursor: pointer;
 }
 
 .contact__input, .contact__select {
@@ -706,6 +726,7 @@ em {
   font-size: 16px;
   padding-left: 8px;
   background-color: transparent;
+  box-sizing: border-box;
 }
 
 textarea.contact__input {
@@ -725,6 +746,7 @@ textarea.contact__input {
   text-transform: uppercase;
   font-family: LivvicBlack, sans-serif;
   border: none;
+  cursor: pointer;
 }
 
 .main__socials {
@@ -1420,9 +1442,12 @@ textarea.contact__input {
   text-decoration: none;
 }
 
-.mainContact .contact__form {
+.main__contact #wpcf7-f244-o1 {
   grid-column: 2/3;
   grid-row: 1/-1;
+}
+
+.mainContact form {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -1431,7 +1456,7 @@ textarea.contact__input {
   margin-top: -40px;
 }
 
-.mainContact .contact__form div:first-child {
+.mainContact form div:first-child {
   margin-top: 80px;
 }
 
@@ -1455,6 +1480,65 @@ textarea.contact__input {
 
 .mainContact .infos__promo {
   margin-top: 80px;
+}
+
+form br {
+  display: none;
+}
+
+.wpcf7-response-output {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.screen-reader-response {
+  margin-top: 20px;
+}
+
+.mainContact .wpcf7-response-output {
+  margin-top: 40px;
+  text-align: left;
+}
+
+.mainContact .screen-reader-response {
+  display: none;
+}
+
+.error404 .error404__title {
+  padding-top: 320px;
+  font-size: 100px;
+  text-align: center;
+}
+
+.error404 .error404__text {
+  margin-bottom: 80px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.error404 .error404__link {
+  display: block;
+  margin: 0 auto 320px;
+  font-size: 20px;
+  text-align: center;
+  color: #000;
+}
+
+.mainPrivacy {
+  padding: 100px 10vw 160px;
+}
+
+.mainPrivacy section {
+  margin-bottom: 40px;
+}
+
+.mainPrivacy__title {
+  font-size: 35px;
+  margin-bottom: 40px;
+}
+
+.mainPrivacy p {
+  margin-top: 10px;
 }
 
 @media (min-width: 1400px) {
@@ -1676,7 +1760,7 @@ textarea.contact__input {
     max-width: 600px;
   }
 
-  .footer {
+  .footer__container {
     padding: 0 40px 40px;
     display: grid;
     grid-template-rows: auto auto;
@@ -2067,7 +2151,6 @@ textarea.contact__input {
 .inview {
   opacity: 1;
   transform: none;
-  transition-delay: 0.25s;
 }
 
 .actors__link:hover {
@@ -2117,5 +2200,9 @@ textarea.contact__input {
 }
 
 .mainContact .contact__infos .infos__link:hover, .mainContact .infos__promo a:hover {
+  text-decoration: underline;
+}
+
+.privacy__link:hover {
   text-decoration: underline;
 }

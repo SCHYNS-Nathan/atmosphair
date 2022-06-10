@@ -1,4 +1,4 @@
-.footer {
+.footer__container {
     display: flex;
     justify-content: space-between;
     padding: 0 80px 40px;
@@ -51,4 +51,20 @@
 }
 .logos__svg {
     height: 40px;
+}
+
+.footer__privacy {
+    background-color: #fff;
+    border-top: 1px solid rgba(0,0,0,.1);
+    padding: 20px 5vw;
+    display: flex;
+    flex-direction: row-reverse;
+}
+.privacy__link {
+    color: rgba(0,0,0,.5);
+    text-decoration: none;
+    margin-left: 40px;
+}
+.privacy__text {
+    color: rgba(0,0,0,.5);
 }

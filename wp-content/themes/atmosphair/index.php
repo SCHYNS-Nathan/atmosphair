@@ -53,7 +53,7 @@
             <a class="projects__link" href="<?= site_url('projets/'); ?>"><?= __('Voir tous nos projets','atmosphair') ?></a>
         </div>
         <ul class="projects__list fade-in">
-            <?php if(($modules = atmos_get_modules_for_index(5))->have_posts()): while($modules->have_posts()): $modules->the_post();
+            <?php if(($modules = atmos_get_modules_for_index())->have_posts()): while($modules->have_posts()): $modules->the_post();
                 include (__DIR__ . '/partials/module.php');
             endwhile; else:  ?>
             <?php endif; ?>
@@ -73,7 +73,7 @@
             <a class="articles__link" href="<?= site_url('publications/'); ?>"><?= __('Voir toutes les publications','atmosphair') ?></a>
         </div>
         <ul class="articles__list fade-in">
-            <?php if(($publications = atmos_get_publications_for_index(5))->have_posts()): while($publications->have_posts()): $publications->the_post();
+            <?php if(($publications = atmos_get_publications_for_index())->have_posts()): while($publications->have_posts()): $publications->the_post();
                 include (__DIR__ . '/partials/publication.php');
             endwhile; else:  ?>
             <?php endif; ?>
@@ -89,30 +89,14 @@
     <section class="main__contact">
         <div class="contact__container">
             <h3 class="contact__title"><?= __('Une question ?','atmosphair') . "<br>" .  __('Contactez-nous !','atmosphair'); ?></h3>
-            <form class="contact__form">
-                <label class="contact__label fade-in" for="name"><?= __('Votre nom','atmosphair'); ?></label>
-                <input class="contact__input fade-in" id="name" name="name" placeholder="<?= __('Nom','atmosphair'); ?>" required>
-                <label class="contact__label fade-in" for="firstname"><?= __('Votre prénom','atmosphair'); ?></label>
-                <input class="contact__input fade-in" id="firstname" name="firstname" placeholder="<?= __('Prénom','atmosphair'); ?>" required>
-                <label class="contact__label fade-in" for="mail"><?= __('Votre adresse mail','atmosphair'); ?></label>
-                <input class="contact__input fade-in" id="mail" name="mail" placeholder="<?= __('nom.prénom@email.com','atmosphair'); ?>" required>
-                <label class="contact__label fade-in" for="subject"><?= __('Sujet','atmosphair'); ?></label>
-                <select class="contact__select fade-in" id="subject" name="subject">
-                    <option value="issep"><?= __('Question à propos des résultats','atmosphair'); ?></option>
-                    <option value="hepl"><?= __('Question à propos de la section électronique et systèmes embarqués','atmosphair'); ?></option>
-                    <option value="issep"><?= __('Achat pour le secteur privé','atmosphair'); ?></option>
-                    <option value="issep"><?= __('Achat pour le secteur public','atmosphair'); ?></option>
-                </select>
-                <label class="contact__label fade-in" for="message"><?= __('Votre message','atmosphair'); ?></label>
-                <textarea class="contact__input fade-in" id="message" name="message" placeholder="<?= __('Écrivez votre message ici','atmosphair'); ?>" required></textarea>
-                <input class="contact__submit fade-in" type="submit">
-            </form>
+            <?= do_shortcode('[contact-form-7 id="244" title="Formulaire index"]') ?>
+
         </div>
     </section>
     <section class="main__socials">
         <h3 class="socials__title fade-in"><?= __('Suivez-nous sur nos réseaux sociaux !','atmosphair'); ?></h3>
         <ul class="socials__list fade-in">
-            <?php if(($socials = atmos_get_socials(2))->have_posts()): while($socials->have_posts()): $socials->the_post();
+            <?php if(($socials = atmos_get_socials())->have_posts()): while($socials->have_posts()): $socials->the_post();
                 include (__DIR__ . '/partials/social.php');
             endwhile; else:  ?>
                 <p class="projects__error"><?= __('Il n\'y a pas de réseau social à afficher pour le moment, revenez plus tard.','atmosph\'air'); ?></p>

@@ -6,7 +6,6 @@
 .inview {
 	opacity: 1;
 	transform: none;
-	transition-delay: .25s;
 }
 
 .actors__link:hover {
@@ -51,5 +50,9 @@
 
 
 .mainContact .contact__infos .infos__link:hover, .mainContact .infos__promo a:hover {
+	text-decoration: underline;
+}
+
+.privacy__link:hover {
 	text-decoration: underline;
 }
