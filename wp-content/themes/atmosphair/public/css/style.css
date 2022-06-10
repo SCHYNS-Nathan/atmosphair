@@ -1069,7 +1069,7 @@ textarea.contact__input {
 .singleMain .who__container {
   display: flex;
   justify-content: space-around;
-  margin: 0 160px;
+  margin: 0 160px 40px;
 }
 
 .singleMain .who__group {
@@ -1089,21 +1089,6 @@ textarea.contact__input {
 
 .singleMain .who__characteristic {
   text-align: center;
-}
-
-.singleMain .main__technicals {
-  background-color: #fff;
-  position: absolute;
-  top: 700px;
-  left: 60vw;
-  min-width: 300px;
-  max-width: 600px;
-  height: 500px;
-}
-
-.singleMain .main__technicals .technicals__title {
-  font-size: 20px;
-  padding: 20px 40px 20px 20px;
 }
 
 .singleMain .main__how {
