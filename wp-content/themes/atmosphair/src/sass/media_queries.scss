@@ -208,6 +208,9 @@
 		padding: 40px 5vw;
 		flex-direction: column-reverse;
 	}
+	.main__about .actors__actor:last-child {
+		padding-bottom: 80px;
+	}
 	.main__about .actors__actor:nth-child(2n-1) {
 		flex-direction: column-reverse;
 	}
@@ -426,6 +429,15 @@
 	.singleMain .projects__item:first-child {
 		margin-left: 80px;
 	}
+
+	.mainContact form {
+		border-left: none;
+		padding-left: 0;
+		margin-top: 40px;
+	}
+	.mainContact .main__contact {
+		max-width: 880px;
+	}
 }
 @media (max-width: 480px) {
 	.main__actors {
@@ -440,8 +452,12 @@
 	}
 
 	.main__morals {
-		padding: 10px 5vw;
+		padding: 20px 5vw 40px;
 		flex-direction: column;
+	}
+	.main__morals .morals__moral {
+		width: 50vw;
+		margin: auto;
 	}
 	.morals__moral:nth-child(n+2) {
 		margin-bottom: 40px;
@@ -458,9 +474,13 @@
 		height: auto;
 		margin: 0;
 	}
-	.projects div div.project__name, .projects .project__description {
+	.projects div div.project__name {
 		width: 100vw;
-		margin: 0 0 20px;
+		margin: 10px 0 20px;
+	}
+	.projects .project__description {
+		width: 90vw;
+		margin: 0 auto 20px;
 	}
 	.projects .project__link {
 		padding: 20px 0;
