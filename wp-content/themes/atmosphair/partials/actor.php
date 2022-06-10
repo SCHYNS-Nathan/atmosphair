@@ -1,6 +1,6 @@
-<div class="actors__actor fade-in" itemscope itemtype="https://schema.org/Organization">
+<div class="actors__actor fade-in" itemscope itemtype="https://schema.org/Organization" aria-labelledby="actor-<?= get_field('nom', false, false); ?>">
     <div class="actor__container">
-        <h4 class="actor__title" itemprop="name"><?= get_field('nom', false, false); ?></h4>
+        <h4 class="actor__title" itemprop="name" id="actor-<?= get_field('nom', false, false); ?>" aria-level="4"><?= get_field('nom', false, false); ?></h4>
         <p class="actor__text">
             <?= get_field('description', false, false); ?>
         </p>

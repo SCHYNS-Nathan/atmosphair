@@ -1,7 +1,7 @@
 <?php /** * The template for displaying 404 pages (Not Found) */
 get_header(); ?>
-<main class="error404">
-	<h2 class="error404__title">
+<main class="error404" aria-labelledby="404">
+	<h2 class="error404__title" aria-level="2" id="404">
 		404
 	</h2>
 	<p class="error404__text">
