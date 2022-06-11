@@ -135,14 +135,19 @@
 		margin: -40ox auto 0;
 		width: 100vw;
 		min-width: unset;
+		min-height: 300px;
 		height: unset;
 	}
 	.actors__image {
-		margin: 0;
+		display: block;
+		margin: -40px auto 10px;
 		width: auto;
+		float: none;
 	}
 	.actors__text {
-		padding: 20px 20px 0 220px;
+		padding: 20px;
+		margin: auto;
+		clear: both;
 	}
 	.actors__link {
 		display: block;
@@ -206,6 +211,9 @@
 	.main__about .actors__actor {
 		padding: 40px 5vw;
 		flex-direction: column-reverse;
+	}
+	.main__about .actor__container {
+		padding: 0;
 	}
 	.main__about .actors__actor:last-child {
 		padding-bottom: 80px;
@@ -370,6 +378,9 @@
 	.singleMain .who__group {
 		min-width: 150px;
 	}
+	.singleMain .who__characteristic {
+		margin-top: 10px;
+	}
 	.singleMain .result__text {
 		padding-bottom: 40px;
 	}
@@ -525,6 +536,7 @@
 	}
 	.singleMain .result__link, .singleMain .more__link {
 		display: flex;
+		justify-content: center;
 		align-items: center;
 		margin: 20px;
 	}

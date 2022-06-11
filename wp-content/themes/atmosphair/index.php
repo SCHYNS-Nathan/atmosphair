@@ -7,7 +7,7 @@
         <h3 class="stats__title hidden" aria-level="3" id="layoutStats"><?= __('La polution en quelques chiffres','atmosph\'air'); ?></h3>
         <div class="stats__stat fade-in">
             <p class="stats__number">
-                <strong>50%</strong>
+                <strong><span id="number1" class="fade-in">50</span>%</strong>
             </p>
             <p class="stats__text">
                 <?= __('de taux de ', 'atmosh\'air') . '<em>' . __('particule fine ','atmosp\'air') . '</em>' . __('ont été détecté dans les embouteillages des grandes villes belges en 2018.','atmosph\'air'); ?>
@@ -15,7 +15,7 @@
         </div>
         <div class="stats__stat fade-in">
             <p class="stats__number">
-                <strong>+33%</strong>
+                <strong>+<span id="number2" class="fade-in">33</span>%</strong>
             </p>
             <p class="stats__text">
                 <?= __('d’augmentation de ', 'atmosh\'air') . '<em>' . __('la polution de l’air ', 'atmosh\'air') . '</em>' .  __('entre 2019 et 2020.','atmosph\'air'); ?>
@@ -23,7 +23,7 @@
         </div>
         <div class="stats__stat fade-in">
             <p class="stats__number">
-                <strong>x5</strong>
+                <strong>x<span id="number3" class="fade-in">5</span></strong>
             </p>
             <p class="stats__text">
                 <?= __('le nombre de personnes diagnostiquées avec des ', 'atmosh\'air') . '<em>' . __('maladies respiratoires ', 'atmosh\'air') . '</em>' . __('en 2021.','atmosph\'air'); ?>

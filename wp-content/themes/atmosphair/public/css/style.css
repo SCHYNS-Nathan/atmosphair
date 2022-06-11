@@ -796,8 +796,8 @@ textarea.contact__input {
 .main__about .actors__actor {
   display: flex;
   justify-content: space-around;
-  height: 400px;
-  padding: 80px 0;
+  min-height: 400px;
+  padding: 80px 20px;
 }
 
 .main__about .actors__actor:nth-child(2n-1) {
@@ -808,6 +808,7 @@ textarea.contact__input {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  padding: 0 10px;
 }
 
 .main__about .actor__title {
@@ -1684,16 +1685,21 @@ form br {
     margin: -40ox auto 0;
     width: 100vw;
     min-width: unset;
+    min-height: 300px;
     height: unset;
   }
 
   .actors__image {
-    margin: 0;
+    display: block;
+    margin: -40px auto 10px;
     width: auto;
+    float: none;
   }
 
   .actors__text {
-    padding: 20px 20px 0 220px;
+    padding: 20px;
+    margin: auto;
+    clear: both;
   }
 
   .actors__link {
@@ -1767,6 +1773,10 @@ form br {
   .main__about .actors__actor {
     padding: 40px 5vw;
     flex-direction: column-reverse;
+  }
+
+  .main__about .actor__container {
+    padding: 0;
   }
 
   .main__about .actors__actor:last-child {
@@ -1951,6 +1961,10 @@ form br {
 
   .singleMain .who__group {
     min-width: 150px;
+  }
+
+  .singleMain .who__characteristic {
+    margin-top: 10px;
   }
 
   .singleMain .result__text {
@@ -2143,6 +2157,7 @@ form br {
 
   .singleMain .result__link, .singleMain .more__link {
     display: flex;
+    justify-content: center;
     align-items: center;
     margin: 20px;
   }
