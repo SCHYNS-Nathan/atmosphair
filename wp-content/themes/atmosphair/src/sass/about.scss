@@ -113,6 +113,7 @@
 
 .timeline__entry {
     display: inline-block;
+    vertical-align: bottom;
     margin-left: 80px;
     transform: rotate(180deg);
     width: 300px;
@@ -125,14 +126,20 @@
     font-family: LivvicBold, sans-serif;
     margin-left: 40px;
 }
+
 .timeline__text {
-    margin-top: 10px;
+    margin-top: -180px;
     margin-left: 40px;
     white-space: normal;
+    min-height: 400px;
+}
+.timeline__thumb {
+    height: 200px;
 }
 .timeline__thumb img {
     position: relative;
-    top: -90px;
+    top: -30px;
     left: -40px;
     z-index: -1;
+    opacity: .5;
 }
