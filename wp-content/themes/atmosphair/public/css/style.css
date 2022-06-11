@@ -1374,11 +1374,11 @@ textarea.contact__input {
   height: 400px;
   background-repeat: no-repeat;
   background-color: #fff;
-  background-size: contain;
+  background-size: cover;
 }
 
 .publications .main__articleContainer {
-  background: linear-gradient(0deg, rgb(255, 255, 255) 0%, rgba(0, 0, 0, 0) 100%);
+  background: linear-gradient(0deg, rgb(255, 255, 255) 50%, rgba(255, 255, 255, 0) 100%);
   max-width: 860px;
   min-width: 170px;
 }
