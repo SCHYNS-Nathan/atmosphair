@@ -1484,17 +1484,17 @@ form br {
   text-align: center;
 }
 
-.screen-reader-response {
-  margin-top: 20px;
-}
-
 .mainContact .wpcf7-response-output {
   margin-top: 40px;
   text-align: left;
 }
 
-.mainContact .screen-reader-response {
+.screen-reader-response {
   display: none;
+}
+
+.mainContact .contact__label {
+  margin-top: 20px;
 }
 
 .error404 .error404__title {
