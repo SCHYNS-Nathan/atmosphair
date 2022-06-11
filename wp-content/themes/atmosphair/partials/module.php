@@ -10,10 +10,12 @@
             <figure class="project__fig">
                 <?= get_the_post_thumbnail(null, 'medium', ['class' => 'actor__thumb']); ?>
             </figure>
-            <p class="project__description" itemprop="description">
-                <?= get_field('description', false, false); ?>
-            </p>
-            <a class="project__link" href="<?= get_the_permalink(); ?>"><?= __('Voir le projet en détail','atmosph\'air'); ?></a>
+            <div class="project__text">
+                <p class="project__description" itemprop="description">
+                    <?= get_field('description', false, false); ?>
+                </p>
+                <a class="project__link" href="<?= get_the_permalink(); ?>"><?= __('Voir le projet en détail','atmosph\'air'); ?></a>
+            </div>
         </div>
     </article>
 </li>
