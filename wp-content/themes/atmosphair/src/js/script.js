@@ -1,3 +1,4 @@
+// FADE-IN EFFECT ON SCROLL
 const items = document.querySelectorAll('.fade-in');
 for (const item of items) {
     item.classList.add('fade');
@@ -13,3 +14,8 @@ const obs = new IntersectionObserver(cb);
 for(let i=0; i < items.length; i++){
     obs.observe(items[i]);
 }
+
+
+
+
+

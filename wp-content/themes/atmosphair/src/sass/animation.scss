@@ -19,6 +19,10 @@
 	background-color: transparent;
 	text-decoration: underline;
 }
+.contact__input:hover {
+	border: 1px solid #000;
+	outline: 1px solid #000;
+}
 .contact__input:focus {
 	border: 1px solid #000;
 	outline: 1px solid #000;
@@ -26,7 +30,10 @@
 .contact__submit:hover {
 	background-color: #DDA458;
 }
-
+.socials__item img:hover {
+	background-color: #DDA458;
+	border-radius: 50%;
+}
 
 .header__item:hover {
 	text-decoration: underline;
