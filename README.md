@@ -50,10 +50,11 @@ Après échange avec le client, nous avons tous convenu que cette section ne ser
 
 ### CSS
 
-Le CSS a été la partie la plus conséquente de ce projet.
+Le CSS a été la partie la plus conséquente de ce projet. Dans l'ensemble, il est proche de ma maquette finale, mais il y a eu quelques modifications à cause de problèmes ou de manque de temps.
 
+Tout d'abord, il est important de dire que des média queries ont été réalisées afin que le site soit utilisable par des supports de toutes tailles. Ainsi, le menu sort du viewport en dessous de 880px pour laisser place à un bouton menu permettant de gagner de la place. Plusieurs dispositions changent aussi en dessous de 880px et 480px afin d'être plus adaptés aux appareils mobiles.
 
-
+La section du slider des projets n'est pas identique à celle que j'avais créer sur ma maquette car je n'ai pas vraiment trouvé de moyen de changer les couleurs du background au hover en fonction du projet. Mis à part ça, le rendu est très proche.
 
 
 ### Images
@@ -68,18 +69,16 @@ Aussi, il est bon de noter que les dégradés ont été réalisé via CSS et les
 
 Voici un test effectué sur GTMetrix :
 
-![Test GTMetrix: Grade B | Performances 84% | Structure 93% | Largest contentful paint 1.3s | Total blockin time 0ms | Cumulative layout shift 0.4](https://user-images.githubusercontent.com/90833102/173080786-37a219e0-1867-4bfe-83c4-c4a2aa245be5.png)
-
+![Test GTMetrix: Grade B | Performances 82% | Structure 91% | Largest contentful paint 2.0s | Total blockin time 0ms | Cumulative layout shift 0](https://user-images.githubusercontent.com/90833102/173233798-a88a12d8-0b01-4de5-be9d-3a07f561563a.png)
 
 Et voici deux tests effectués sur le Lighthouse de Google (respectivement, la version desktop et la version mobile) :
 
-![Test Google Lighthouse: Performance 89 | Accessibility 89 | Best practices 92 | SEO 91](https://user-images.githubusercontent.com/90833102/173081059-5d16e8e2-21e1-4efd-982d-175e0ad28e33.png)
+![Test Google Lighthouse: Performance 100 | Accessibility 98 | Best practices 92 | SEO 100](https://user-images.githubusercontent.com/90833102/173233825-b1613c4e-64ea-4c96-b654-07116a1be7f1.png)
 
-![Test Google Lighthouse: Performance 94 | Accessibility 89 | Best practices 83 | SEO 92](https://user-images.githubusercontent.com/90833102/173081456-a011b5a5-7852-4b8b-b0a4-6f53a1da9c5a.png)
+![Test Google Lighthouse: Performance 88 | Accessibility 90 | Best practices 92 | SEO 100](https://user-images.githubusercontent.com/90833102/173233853-2f80e3be-4069-4cb1-90a8-cbd4adc315d2.png)
 
 
-
-Mis à part un problème due au temps d'apparition du canvas (visible entre 1.4 et 1.8 secondes) tout est dans le vert ! N'ayant malheureusement pas le temps d'optimiser cette partie, ce désagrément ne pourra pas être régler.
+Les résultat sont plutôt bon dans l'ensemble !
 
 
 
