@@ -78,7 +78,7 @@ Et voici deux tests effectués sur le Lighthouse de Google (respectivement, la v
 ![Test Google Lighthouse: Performance 88 | Accessibility 90 | Best practices 92 | SEO 100](https://user-images.githubusercontent.com/90833102/173233853-2f80e3be-4069-4cb1-90a8-cbd4adc315d2.png)
 
 
-Les résultat sont plutôt bon dans l'ensemble !
+Les résultat sont plutôt bon dans l'ensemble mais quelques optimisations pourraient être apportées. (en ajoutant des plugins Wordpress tel que WP Rocket par exemple)
 
 
 
@@ -86,9 +86,8 @@ Les résultat sont plutôt bon dans l'ensemble !
 
 Au niveau de l'accessibilité, le site est :
 
-- entièrement navigable au clavier (l'ouverture du menu est cependant contre-intuitive) ;
+- entièrement navigable au clavier ;
+- sectionné via les aria-level et aria-labeledby ;
 - adapté au condition de contraste diminué et aux différents daltonismes ;
 - utilisable sans javascript ;
 - adapté à différents supports grâce aux media queries.
-
-J'ai aussi suivis plusieurs conseil donné sur le site anysurfer ! (Je n'ai pas été jusqu'à tenté de me donner un score d'accessibilité cependant)
